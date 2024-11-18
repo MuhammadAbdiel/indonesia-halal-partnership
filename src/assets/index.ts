@@ -15,6 +15,11 @@ import dirProd from "./images/dirprod.jpg";
 import dirKerjasama from "./images/dirkerjasama.jpg";
 import ownerCafe from "./images/owner-cafe.jpg";
 import bumbuRawon from "./images/bumbu-rawon.jpg";
+import phone from "./images/phone.png";
+import web from "./images/web.png";
+import email from "./images/email.png";
+import maps from "./images/maps.png";
+import floatingWhatsapp from "./images/floating-whatsapp.png";
 
 export {
   logoPartnership,
@@ -34,4 +39,9 @@ export {
   dirKerjasama,
   ownerCafe,
   bumbuRawon,
+  phone,
+  web,
+  email,
+  maps,
+  floatingWhatsapp,
 };

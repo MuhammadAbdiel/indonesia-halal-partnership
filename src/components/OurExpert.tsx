@@ -49,7 +49,7 @@ export const OurExpert = () => {
       className="bg-[#b7a2cd] py-20 px-6 md:px-16 lg:px-32"
       id="our-expert"
     >
-      <div className="relative">
+      <div className="relative" data-aos="fade-down">
         <div className="flex items-center justify-center space-x-2 text-white mb-4">
           <div className="flex space-x-1">
             <div className="w-3 h-3 bg-halal-lime rounded-full"></div>

@@ -6,7 +6,7 @@ export const Regulations = () => {
       className="bg-[#c6a671] py-20 px-6 md:px-16 lg:px-32"
       id="regulations"
     >
-      <div className="relative">
+      <div className="relative" data-aos="fade-down">
         {/* Number and Decoration */}
         <div className="flex items-center justify-center space-x-2 text-white mb-4">
           <div className="flex space-x-1">
