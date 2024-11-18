@@ -1,10 +1,14 @@
 import {
-  dirKerjasama,
+  dewanPakar,
+  dirIt,
+  dirkerma,
+  dirkeu,
   dirProd,
   dirut,
   komisarisDua,
   komisarisSatu,
   komisarisUtama,
+  management,
   wadirut,
 } from "../assets";
 
@@ -16,14 +20,19 @@ export const OurTeam = () => {
       image: komisarisUtama,
     },
     {
-      name: "Ainur R Rinata, SSos, M.M",
-      position: "Komisaris",
-      image: komisarisSatu,
+      name: "Prof. DR. Irwandi Jaswir",
+      position: "Dewan Pakar",
+      image: dewanPakar,
     },
     {
       name: "Azman, SKM, M.M",
       position: "Komisaris",
       image: komisarisDua,
+    },
+    {
+      name: "Ainur R Rinata, SSos, M.M",
+      position: "Komisaris",
+      image: komisarisSatu,
     },
     {
       name: "Sri Ida W, S.Pd",
@@ -43,12 +52,22 @@ export const OurTeam = () => {
     {
       name: "Nina Afrisanti, SE, MM",
       position: "DirKeu",
-      image: dirProd,
+      image: dirkeu,
     },
     {
-      name: "J. Yusuf, A.Md",
-      position: "DirKerjasama",
-      image: dirKerjasama,
+      name: "Joelijanto Yusuf, A.Md",
+      position: "DirKerma",
+      image: dirkerma,
+    },
+    {
+      name: "Iwan Santoso, ST",
+      position: "Dir-IT",
+      image: dirIt,
+    },
+    {
+      name: "Mida Nopitasari, S.Sos",
+      position: "Management",
+      image: management,
     },
   ];
 
@@ -72,7 +91,7 @@ export const OurTeam = () => {
         </h2>
 
         {/* Team Members */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-center-1 md:grid-cols-center-2 lg:grid-cols-center-4 gap-12">
           {teamMembers.map((member, index) => (
             <div
               key={index}

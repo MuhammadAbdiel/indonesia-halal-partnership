@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { bumbuRawon, ownerCafe } from "../assets";
 
 export const Testimonials = () => {
@@ -37,6 +37,14 @@ export const Testimonials = () => {
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
   };
+
+  // Carousel berjalan otomatis
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000); // Ganti slide setiap 5 detik
+    return () => clearInterval(interval); // Bersihkan interval ketika komponen dilepas
+  }, [activeIndex]);
 
   return (
     <section
@@ -102,9 +110,9 @@ export const Testimonials = () => {
           <div className="flex justify-between items-center mt-4">
             <button
               onClick={prevSlide}
-              className="px-4 py-2 bg-halal-green text-white rounded hover:bg-halal-lime transition"
+              className="text-3xl text-[#1B3932] hover:text-[#B6D74A] transition"
             >
-              Previous
+              &#8592; {/* Panah kiri */}
             </button>
             <div className="space-x-2">
               {testimonials.map((_, index) => (
@@ -118,9 +126,9 @@ export const Testimonials = () => {
             </div>
             <button
               onClick={nextSlide}
-              className="px-4 py-2 bg-halal-green text-white rounded hover:bg-halal-lime transition"
+              className="text-3xl text-[#1B3932] hover:text-[#B6D74A] transition"
             >
-              Next
+              &#8594; {/* Panah kanan */}
             </button>
           </div>
         </div>

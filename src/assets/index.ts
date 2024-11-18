@@ -13,6 +13,11 @@ import dirut from "./images/dirut.jpg";
 import wadirut from "./images/wadirut.jpg";
 import dirProd from "./images/dirprod.jpg";
 import dirKerjasama from "./images/dirkerjasama.jpg";
+import dewanPakar from "./images/dewan-pakar.png";
+import dirkeu from "./images/dirkeu.png";
+import management from "./images/management.jpg";
+import dirkerma from "./images/dirkerma.png";
+import dirIt from "./images/dirIt.png";
 import ownerCafe from "./images/owner-cafe.jpg";
 import bumbuRawon from "./images/bumbu-rawon.jpg";
 import phone from "./images/phone.png";
@@ -31,6 +36,11 @@ export {
   plus,
   arrowRight,
   komisarisUtama,
+  dewanPakar,
+  dirkeu,
+  management,
+  dirkerma,
+  dirIt,
   komisarisSatu,
   komisarisDua,
   dirut,

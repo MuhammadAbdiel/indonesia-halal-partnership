@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const ContentCarousel = () => {
   const slides = [
@@ -59,8 +59,23 @@ export const ContentCarousel = () => {
     );
   };
 
+  // Carousel otomatis
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000); // Interval 5 detik
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="relative overflow-hidden text-black">
+    <div
+      className="relative overflow-hidden text-black"
+      onMouseEnter={() => clearInterval((window as any).interval)}
+      onMouseLeave={() => {
+        (window as any).interval = setInterval(nextSlide, 5000);
+      }}
+    >
       {/* Slides */}
       <div
         className="transition-transform duration-500 ease-in-out"
@@ -113,9 +128,9 @@ export const ContentCarousel = () => {
       <div className="flex justify-between items-center mt-4">
         <button
           onClick={prevSlide}
-          className="px-4 py-2 bg-halal-green text-white rounded hover:bg-halal-lime transition"
+          className="text-3xl text-[#1B3932] hover:text-[#B6D74A] transition"
         >
-          Previous
+          &#8592; {/* Panah kiri */}
         </button>
         <div className="space-x-2">
           {slides.map((_, index) => (
@@ -129,9 +144,9 @@ export const ContentCarousel = () => {
         </div>
         <button
           onClick={nextSlide}
-          className="px-4 py-2 bg-halal-green text-white rounded hover:bg-halal-lime transition"
+          className="text-3xl text-[#1B3932] hover:text-[#B6D74A] transition"
         >
-          Next
+          &#8594; {/* Panah kanan */}
         </button>
       </div>
     </div>

@@ -76,5 +76,8 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("@khoohaoyit/tailwind-grid-center"),
+    require("tailwindcss-animate"),
+  ],
 };

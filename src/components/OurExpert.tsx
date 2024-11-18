@@ -1,26 +1,34 @@
 import {
-  dirKerjasama,
+  dewanPakar,
+  dirIt,
+  dirkerma,
+  dirkeu,
   dirProd,
   dirut,
   komisarisDua,
   komisarisSatu,
   komisarisUtama,
+  management,
   wadirut,
 } from "../assets";
 
 export const OurExpert = () => {
   const teamMembers = [
     {
+      name: "PROFESSOR HALAL DUNIA",
+      image: dewanPakar,
+    },
+    {
       name: "P3H (BPJPH) : A-2424/BD.II/P.II.II/ KP.02/05/2024",
       image: komisarisUtama,
     },
     {
-      name: "P3H (BPJPH) : A-621/BD.II/P.II.II/ KP.02/08/2023",
-      image: komisarisSatu,
-    },
-    {
       name: "P3H (BPJPH) : A-987/BD.II/P.II.II/ KP.02/08/2024",
       image: komisarisDua,
+    },
+    {
+      name: "P3H (BPJPH) : A-621/BD.II/P.II.II/ KP.02/08/2023",
+      image: komisarisSatu,
     },
     {
       name: "P3H (BPJPH) : A-810/BD.II/P.II.II/ KP.02/08/2023",
@@ -36,11 +44,19 @@ export const OurExpert = () => {
     },
     {
       name: "SENIOR ACCOUNTING EXPERT",
-      image: dirProd,
+      image: dirkeu,
     },
     {
       name: "P3H (BPJPH) : A-1669/BD.II/P.II.II/ KP.02/05/2024",
-      image: dirKerjasama,
+      image: dirkerma,
+    },
+    {
+      name: "P3H (BPJPH) : A-405/BD.II/P.II.II/ KP.02/08/2023",
+      image: dirIt,
+    },
+    {
+      name: "Admin",
+      image: management,
     },
   ];
 
@@ -64,7 +80,7 @@ export const OurExpert = () => {
         </h2>
 
         {/* Team Members */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-center-1 md:grid-cols-center-2 lg:grid-cols-center-4 gap-12">
           {teamMembers.map((member, index) => (
             <div
               key={index}
