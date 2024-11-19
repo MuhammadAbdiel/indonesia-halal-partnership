@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { bumbuRawon, ownerCafe } from "../assets";
+import { bumbuRawon, ownerCafe, ukm } from "../assets";
 
 export const Testimonials = () => {
   const testimonials = [
@@ -22,7 +22,7 @@ export const Testimonials = () => {
       content:
         "Alhamdulillah, sampai nangis saya, akhirnya punya Sertifikat Halal, supaya bisa mengembangkan penjualan dan diikutkan kegiatan-kegiatan promosi karena banyak produk impor sejenis.",
       location: "",
-      image: bumbuRawon,
+      image: ukm,
     },
   ];
 
@@ -62,7 +62,7 @@ export const Testimonials = () => {
 
         {/* Title */}
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-[#1B3932]">
+          <h2 className="text-5xl font-bold text-[#1B3932]">
             Customer Testimonials
           </h2>
         </div>

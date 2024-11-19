@@ -25,6 +25,12 @@ import web from "./images/web.png";
 import email from "./images/email.png";
 import maps from "./images/maps.png";
 import floatingWhatsapp from "./images/floating-whatsapp.png";
+import makanan from "./images/makanan.jpg";
+import minuman from "./images/minuman.jpg";
+import kosmetik from "./images/kosmetik.jpg";
+import ukm from "./images/ukm.png";
+import halalTalks from "./images/halal-talks.png";
+import conferenceHalalInternational from "./images/conference-halal-international.png";
 
 export {
   logoPartnership,
@@ -54,4 +60,10 @@ export {
   email,
   maps,
   floatingWhatsapp,
+  makanan,
+  minuman,
+  kosmetik,
+  ukm,
+  halalTalks,
+  conferenceHalalInternational,
 };

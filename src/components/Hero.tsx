@@ -1,9 +1,25 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
 import { logoBPJPH, logoHalalIndonesia, logoPartnership } from "../assets";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = (direction: any) => {
+    const navContainer = document.getElementById("nav-container");
+    const scrollAmount = 200; // Adjust scroll amount as needed
+
+    if (navContainer) {
+      if (direction === "left") {
+        navContainer.scrollLeft -= scrollAmount;
+      } else {
+        navContainer.scrollLeft += scrollAmount;
+      }
+      setScrollPosition(navContainer.scrollLeft);
+    }
+  };
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-halal-green">
@@ -27,88 +43,123 @@ export const Hero = () => {
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex space-x-6 text-white font-semibold text-lg">
-            <li>
-              <Link
-                to="regulations"
-                smooth={true}
-                duration={2000}
-                className="hover:text-halal-lime transition-all cursor-pointer"
-              >
-                Sertifikat Halal
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="halal-product"
-                smooth={true}
-                duration={2000}
-                className="hover:text-halal-lime transition-all cursor-pointer"
-              >
-                Produk Halal
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="company-history"
-                smooth={true}
-                duration={2000}
-                className="hover:text-halal-lime transition-all cursor-pointer"
-              >
-                Company History
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="vision"
-                smooth={true}
-                duration={2000}
-                className="hover:text-halal-lime transition-all cursor-pointer"
-              >
-                Visi & Misi
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="choose-us"
-                smooth={true}
-                duration={2000}
-                className="hover:text-halal-lime transition-all cursor-pointer"
-              >
-                Choose Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="our-team"
-                smooth={true}
-                duration={2000}
-                className="hover:text-halal-lime transition-all cursor-pointer"
-              >
-                Our Team
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="our-expert"
-                smooth={true}
-                duration={2000}
-                className="hover:text-halal-lime transition-all cursor-pointer"
-              >
-                Our Expert
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="testimonials"
-                smooth={true}
-                duration={2000}
-                className="hover:text-halal-lime transition-all cursor-pointer"
-              >
-                Testimonials
-              </Link>
-            </li>
-          </ul>
+          <div className="hidden md:flex items-center max-w-[70%] flex-1 justify-center relative">
+            <button
+              onClick={() => handleScroll("left")}
+              className="absolute left-0 z-10 bg-halal-green/50 p-2 rounded-full hover:bg-halal-green/70 transition-colors"
+            >
+              <ChevronLeft className="w-6 h-6 text-white" />
+            </button>
+
+            <div
+              id="nav-container"
+              className="flex overflow-x-auto scrollbar-hide max-w-[calc(100%-120px)] scroll-smooth"
+              style={{
+                msOverflowStyle: "none",
+                scrollbarWidth: "none",
+              }}
+            >
+              <ul className="flex space-x-6 text-white font-semibold text-lg whitespace-nowrap px-4">
+                <li>
+                  <Link
+                    to="regulations"
+                    smooth={true}
+                    duration={2000}
+                    className="hover:text-halal-lime transition-all cursor-pointer"
+                  >
+                    Sertifikat Halal
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="halal-product"
+                    smooth={true}
+                    duration={2000}
+                    className="hover:text-halal-lime transition-all cursor-pointer"
+                  >
+                    Produk Halal
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="company-history"
+                    smooth={true}
+                    duration={2000}
+                    className="hover:text-halal-lime transition-all cursor-pointer"
+                  >
+                    Company History
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="vision"
+                    smooth={true}
+                    duration={2000}
+                    className="hover:text-halal-lime transition-all cursor-pointer"
+                  >
+                    Visi & Misi
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="choose-us"
+                    smooth={true}
+                    duration={2000}
+                    className="hover:text-halal-lime transition-all cursor-pointer"
+                  >
+                    Choose Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="our-team"
+                    smooth={true}
+                    duration={2000}
+                    className="hover:text-halal-lime transition-all cursor-pointer"
+                  >
+                    Our Team
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="our-expert"
+                    smooth={true}
+                    duration={2000}
+                    className="hover:text-halal-lime transition-all cursor-pointer"
+                  >
+                    Our Expert
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="testimonials"
+                    smooth={true}
+                    duration={2000}
+                    className="hover:text-halal-lime transition-all cursor-pointer"
+                  >
+                    Testimonials
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="gallery"
+                    smooth={true}
+                    duration={2000}
+                    className="hover:text-halal-lime transition-all cursor-pointer"
+                  >
+                    Gallery
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <button
+              onClick={() => handleScroll("right")}
+              className="absolute right-0 z-10 bg-halal-green/50 p-2 rounded-full hover:bg-halal-green/70 transition-colors"
+            >
+              <ChevronRight className="w-6 h-6 text-white" />
+            </button>
+          </div>
 
           {/* Hamburger Menu Button */}
           <button
@@ -228,6 +279,17 @@ export const Hero = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Testimonials
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="gallery"
+                smooth={true}
+                duration={2000}
+                className="hover:text-halal-lime transition-all cursor-pointer"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Gallery
               </Link>
             </li>
           </ul>
