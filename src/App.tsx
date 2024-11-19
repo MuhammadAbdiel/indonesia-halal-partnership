@@ -14,6 +14,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { Gallery } from "./components/Gallery";
 import axios from "axios";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Dashboard } from "./pages/Dashboard";
 
 export const App = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -24,15 +26,13 @@ export const App = () => {
 
   const sendMessage = (menuOption: number | string) => {
     const messages: { [key: string]: string } = {
-      1: "Silakan isi:\nNama Usaha:\nBidang usaha:\nNo NIB:\nSkala usaha:\nJumlah Fasilitas produksi (dapur/outlet/cabang):\nLokasi fasilitas produksi:\nJumlah produk/menu:\nJumlah karyawan:",
-      2: "Mandatory Sertifikasi Halal bagi seluruh Pelaku Usaha",
-      3: "",
+      1: "",
+      2: "",
     };
 
     const phoneNumbers: { [key: string]: string } = {
       1: "6281511397981",
       2: "6281234000068",
-      3: "6281234000068",
     };
 
     const message = messages[menuOption];
@@ -56,7 +56,15 @@ export const App = () => {
           pageVisited: window.location.pathname,
         };
 
-        await axios.post("http://localhost:5000/api/visitors", visitorData);
+        await axios.post(
+          "https://indonesiahalalpartner.com/save_visitor.php",
+          visitorData,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
       } catch (err) {
         console.error("Error tracking visitor:", err);
       }
@@ -66,54 +74,66 @@ export const App = () => {
   }, []);
 
   return (
-    <>
-      <Hero />
-      <Regulations />
-      <HalalProduct />
-      <CompanyHistory />
-      <Vision />
-      <ChooseUs />
-      <OurTeam />
-      <OurExpert />
-      <Testimonials />
-      <Gallery />
-      <Footer />
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <Regulations />
+              <HalalProduct />
+              <CompanyHistory />
+              <Vision />
+              <ChooseUs />
+              <OurTeam />
+              <OurExpert />
+              <Testimonials />
+              <Gallery />
+              <Footer />
+            </>
+          }
+        />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
 
       {/* Floating WhatsApp Button */}
-      <div className="fixed bottom-5 right-5 z-10">
-        <img
-          src={floatingWhatsapp}
-          width={75}
-          height={75}
-          alt="whatsapp"
-          onClick={() => setOpenMenu(!openMenu)}
-          className="cursor-pointer"
-        />
-      </div>
+      {window.location.pathname !== "/dashboard" && (
+        <div className="fixed bottom-5 right-5 z-10">
+          <img
+            src={floatingWhatsapp}
+            width={75}
+            height={75}
+            alt="whatsapp"
+            onClick={() => setOpenMenu(!openMenu)}
+            className="cursor-pointer"
+          />
+        </div>
+      )}
 
       {/* WhatsApp Menu */}
       {openMenu && (
         <div className="fixed bottom-20 right-5 bg-white p-4 shadow-lg rounded-lg z-20">
           <button
-            className="block w-full bg-blue-500 text-white px-4 py-2 rounded mb-2"
+            className="block w-full bg-emerald-500 text-white px-4 py-2 rounded mb-2"
             onClick={() => sendMessage(2)}
           >
-            Kenapa Harus Memiliki Sertifikat Halal
+            Admin 1
           </button>
           <button
-            className="block w-full bg-blue-500 text-white px-4 py-2 rounded mb-2"
+            className="block w-full bg-emerald-500 text-white px-4 py-2 rounded mb-2"
             onClick={() => sendMessage(1)}
           >
-            Syarat Pengurusan Sertifikat Halal
+            Admin 2
           </button>
-          <button
+          {/* <button
             className="block w-full bg-blue-500 text-white px-4 py-2 rounded"
             onClick={() => sendMessage(3)}
           >
             Bicara dengan Admin
-          </button>
+          </button> */}
         </div>
       )}
-    </>
+    </BrowserRouter>
   );
 };

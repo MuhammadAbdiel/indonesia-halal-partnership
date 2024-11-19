@@ -11,14 +11,30 @@ export const Footer = () => {
               <span className="bg-halal-lime p-2 rounded-full">
                 <img src={phone} alt="phone" className="h-6 w-6" />
               </span>
-              <a
-                href="https://wa.me/6281511397981"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                +62 815 1139 7981
-              </a>
+              <div className="flex flex-col">
+                <div className="flex gap-8">
+                  Admin 1 :
+                  <a
+                    href="https://wa.me/6281511397981"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    +62 815 1139 7981
+                  </a>
+                </div>
+                <div className="flex gap-8">
+                  Admin 2 :
+                  <a
+                    href="https://wa.me/6281234000068"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    +62 812 3400 0068
+                  </a>
+                </div>
+              </div>
             </li>
             <li className="flex items-center gap-4">
               <span className="bg-halal-lime p-2 rounded-full">
