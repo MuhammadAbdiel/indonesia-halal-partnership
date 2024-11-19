@@ -9,7 +9,7 @@ import {
   produkHalal,
 } from "../assets";
 
-const ProductCategoryCard = ({ title, description, imageUrl }: any) => (
+const ProductCategoryCard = ({ title, imageUrl }: any) => (
   <div className="bg-white/10 backdrop-blur rounded-lg overflow-hidden">
     <div className="p-6">
       <img
