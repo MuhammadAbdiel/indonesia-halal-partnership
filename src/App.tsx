@@ -21,17 +21,21 @@ export const App = () => {
     Aos.init({ duration: 2000, offset: 200, easing: "ease-in-out" });
   }, []);
 
-  // Fungsi untuk mengirim pesan WhatsApp
-  const sendMessage = (menuOption: any) => {
-    const messages: any = {
+  const sendMessage = (menuOption: number | string) => {
+    const messages: { [key: string]: string } = {
       1: "Silakan isi:\nNama Usaha:\nBidang usaha:\nNo NIB:\nSkala usaha:\nJumlah Fasilitas produksi (dapur/outlet/cabang):\nLokasi fasilitas produksi:\nJumlah produk/menu:\nJumlah karyawan:",
       2: "Mandatory Sertifikasi Halal bagi seluruh Pelaku Usaha",
-      default:
-        "Selamat datang di IHP, silakan pilih menu berikut:\n1. Syarat pengurusan Sertifikat Halal\n2. Kenapa harus memiliki Sertifikat Halal\n3. Bicara dengan admin",
+      3: "",
     };
 
-    const message = messages[menuOption] || messages.default;
-    const phoneNumber = "6281234000068"; // Ganti dengan nomor WhatsApp Anda
+    const phoneNumbers: { [key: string]: string } = {
+      1: "6281511397981",
+      2: "6281234000068",
+      3: "6281234000068",
+    };
+
+    const message = messages[menuOption];
+    const phoneNumber = phoneNumbers[menuOption];
 
     const encodedMessage = encodeURIComponent(message);
     window.open(
@@ -83,7 +87,7 @@ export const App = () => {
           </button>
           <button
             className="block w-full bg-blue-500 text-white px-4 py-2 rounded"
-            onClick={() => sendMessage("default")}
+            onClick={() => sendMessage(3)}
           >
             Bicara dengan Admin
           </button>

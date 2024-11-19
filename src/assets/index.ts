@@ -13,10 +13,10 @@ import dirut from "./images/dirut.jpg";
 import wadirut from "./images/wadirut.jpg";
 import dirProd from "./images/dirprod.jpg";
 import dirKerjasama from "./images/dirkerjasama.jpg";
-import dewanPakar from "./images/dewan-pakar.png";
+import dewanPakar from "./images/dewan-pakar.webp";
 import dirkeu from "./images/dirkeu.png";
 import management from "./images/management.jpg";
-import dirkerma from "./images/dirkerma.png";
+import dirkerma from "./images/dirkerma.jpg";
 import dirIt from "./images/dirIt.png";
 import ownerCafe from "./images/owner-cafe.jpg";
 import bumbuRawon from "./images/bumbu-rawon.jpg";
@@ -29,8 +29,8 @@ import makanan from "./images/makanan.jpg";
 import minuman from "./images/minuman.jpg";
 import kosmetik from "./images/kosmetik.jpg";
 import ukm from "./images/ukm.png";
-import halalTalks from "./images/halal-talks.png";
-import conferenceHalalInternational from "./images/conference-halal-international.png";
+import halalTalks from "./images/halal-talks.jpg";
+import conferenceHalalInternational from "./images/conference-halal-international.jpg";
 
 export {
   logoPartnership,
