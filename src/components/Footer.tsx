@@ -12,12 +12,12 @@ export const Footer = () => {
                 <img src={phone} alt="phone" className="h-6 w-6" />
               </span>
               <a
-                href="https://wa.me/6281234000068"
+                href="https://wa.me/6281511397981"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                +62 812 3400 0068
+                +62 815 1139 7981
               </a>
             </li>
             <li className="flex items-center gap-4">

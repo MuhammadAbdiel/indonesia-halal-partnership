@@ -13,6 +13,7 @@ import { Vision } from "./components/Vision";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Gallery } from "./components/Gallery";
+import axios from "axios";
 
 export const App = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -43,6 +44,26 @@ export const App = () => {
       "_blank"
     );
   };
+
+  useEffect(() => {
+    const trackVisitor = async () => {
+      try {
+        const visitorData = {
+          ip: await fetch("https://api.ipify.org?format=json")
+            .then((res) => res.json())
+            .then((data) => data.ip),
+          userAgent: navigator.userAgent,
+          pageVisited: window.location.pathname,
+        };
+
+        await axios.post("http://localhost:5000/api/visitors", visitorData);
+      } catch (err) {
+        console.error("Error tracking visitor:", err);
+      }
+    };
+
+    trackVisitor();
+  }, []);
 
   return (
     <>
@@ -75,15 +96,15 @@ export const App = () => {
         <div className="fixed bottom-20 right-5 bg-white p-4 shadow-lg rounded-lg z-20">
           <button
             className="block w-full bg-blue-500 text-white px-4 py-2 rounded mb-2"
-            onClick={() => sendMessage(1)}
-          >
-            Syarat Pengurusan Sertifikat Halal
-          </button>
-          <button
-            className="block w-full bg-blue-500 text-white px-4 py-2 rounded mb-2"
             onClick={() => sendMessage(2)}
           >
             Kenapa Harus Memiliki Sertifikat Halal
+          </button>
+          <button
+            className="block w-full bg-blue-500 text-white px-4 py-2 rounded mb-2"
+            onClick={() => sendMessage(1)}
+          >
+            Syarat Pengurusan Sertifikat Halal
           </button>
           <button
             className="block w-full bg-blue-500 text-white px-4 py-2 rounded"
