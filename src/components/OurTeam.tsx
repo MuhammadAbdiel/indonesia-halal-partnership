@@ -1,5 +1,7 @@
 import {
+  auditor,
   dewanPakar,
+  direkturMarketing,
   dirIt,
   dirkerma,
   dirkeu,
@@ -15,14 +17,19 @@ import {
 export const OurTeam = () => {
   const teamMembers = [
     {
-      name: "M Monarita D, SKeb, M.Si",
-      position: "Komisaris Utama",
-      image: komisarisUtama,
-    },
-    {
       name: "Prof. DR. Irwandi Jaswir",
       position: "Dewan Pakar",
       image: dewanPakar,
+    },
+    {
+      name: "Rafi Chanssa Ardiannantha, S.Pt",
+      position: "Auditor",
+      image: auditor,
+    },
+    {
+      name: "M Monarita D, SKeb, M.Si",
+      position: "Komisaris Utama",
+      image: komisarisUtama,
     },
     {
       name: "Azman, SKM, M.M",
@@ -50,19 +57,24 @@ export const OurTeam = () => {
       image: dirProd,
     },
     {
+      name: "Akhmad Fattah, S.Sos",
+      position: "Direktur Marketing",
+      image: direkturMarketing,
+    },
+    {
       name: "Nina Afrisanti, SE, MM",
       position: "DirKeu",
       image: dirkeu,
     },
     {
-      name: "Joelijanto Yusuf, A.Md",
-      position: "DirKerma",
-      image: dirkerma,
-    },
-    {
       name: "Iwan Santoso, ST",
       position: "Dir-IT",
       image: dirIt,
+    },
+    {
+      name: "Joelijanto Yusuf, A.Md",
+      position: "DirKerma",
+      image: dirkerma,
     },
     {
       name: "Mida Nopitasari, S.Sos",

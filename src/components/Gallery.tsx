@@ -7,13 +7,13 @@ export const Gallery = () => {
       title: "HALAL TALKS - LPH UB",
       description:
         "HALAL TALKS - LPH UB, dihadiri Narsum dari Sekretaris Komite Fatwa MUI Jatim, Dewan Pakar LPH UB, Halal Food Analysis (University Malaysia Sabah)",
-      image: halalTalks, // Replace with your image path
+      image: conferenceHalalInternational, // Replace with your image path
     },
     {
       title: "Conference Halal International & Trading Expo",
       description:
         "The 3rd H2O Conference Halal International & Trading EXPO Indonesia",
-      image: conferenceHalalInternational, // Replace with your image path
+      image: halalTalks, // Replace with your image path
     },
   ];
 

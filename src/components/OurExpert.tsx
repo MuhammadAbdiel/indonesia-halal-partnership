@@ -1,5 +1,7 @@
 import {
+  auditor,
   dewanPakar,
+  direkturMarketing,
   dirIt,
   dirkerma,
   dirkeu,
@@ -17,6 +19,10 @@ export const OurExpert = () => {
     {
       name: "PROFESSOR HALAL DUNIA",
       image: dewanPakar,
+    },
+    {
+      name: "AUDITOR : AHA.1644.01879.2023",
+      image: auditor,
     },
     {
       name: "P3H (BPJPH) : A-2424/BD.II/P.II.II/ KP.02/05/2024",
@@ -43,16 +49,20 @@ export const OurExpert = () => {
       image: dirProd,
     },
     {
+      name: "PENYELIA HALAL : R.DN - 1.2.0122",
+      image: direkturMarketing,
+    },
+    {
       name: "SENIOR ACCOUNTING EXPERT P3H (BPJPH) : A-517/BD.II/P.II.II/ KP.02/11/2024",
       image: dirkeu,
     },
     {
-      name: "P3H (BPJPH) : A-1669/BD.II/P.II.II/ KP.02/05/2024",
-      image: dirkerma,
-    },
-    {
       name: "P3H (BPJPH) : A-405/BD.II/P.II.II/ KP.02/08/2023",
       image: dirIt,
+    },
+    {
+      name: "P3H (BPJPH) : A-1669/BD.II/P.II.II/ KP.02/05/2024",
+      image: dirkerma,
     },
     {
       name: "Admin",

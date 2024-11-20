@@ -31,6 +31,8 @@ import kosmetik from "./images/kosmetik.jpg";
 import ukm from "./images/ukm.png";
 import halalTalks from "./images/halal-talks.jpg";
 import conferenceHalalInternational from "./images/conference-halal-international.jpg";
+import auditor from "./images/auditor.jpg";
+import direkturMarketing from "./images/direktur-marketing.jpg";
 
 export {
   logoPartnership,
@@ -66,4 +68,6 @@ export {
   ukm,
   halalTalks,
   conferenceHalalInternational,
+  auditor,
+  direkturMarketing,
 };

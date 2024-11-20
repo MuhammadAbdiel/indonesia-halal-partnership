@@ -95,8 +95,9 @@ export const Dashboard = () => {
     },
     {
       name: "Visit Date",
-      selector: (row: any) => `${row.visit_month} - ${row.visit_year}`,
+      selector: (row: any) => row.visit_time,
       sortable: true,
+      grow: 2,
     },
     {
       name: "Visits",
