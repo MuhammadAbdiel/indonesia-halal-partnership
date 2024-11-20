@@ -161,13 +161,13 @@ export const VisitorChart: React.FC<VisitorChartProps> = ({ stats }) => {
             labelStyle={{ fontWeight: "bold" }}
           />
           <Legend verticalAlign="top" height={36} iconType="circle" />
-          <Line
+          {/* <Line
             type="monotone"
             dataKey="daily_visits"
             stroke="#3182CE"
             activeDot={{ r: 8 }}
             name="Total Visits"
-          />
+          /> */}
           <Line
             type="monotone"
             dataKey="unique_visitors"
