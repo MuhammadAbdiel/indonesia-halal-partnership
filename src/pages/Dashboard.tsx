@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import DataTable from "react-data-table-component";
+import { VisitorChart } from "../components/VisitorCharts";
 
 export const Dashboard = () => {
   const [stats, setStats] = useState([]);
@@ -299,7 +300,9 @@ export const Dashboard = () => {
           </p>
         </div>
 
-        <div className="flex items-center justify-between mb-6">
+        <VisitorChart stats={stats} />
+
+        <div className="flex items-center justify-between my-6">
           <div className="text-lg font-medium text-gray-700">
             Total Unique Visitors:{" "}
             <span className="text-xl font-bold text-green-600">
