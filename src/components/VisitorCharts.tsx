@@ -173,7 +173,7 @@ export const VisitorChart: React.FC<VisitorChartProps> = ({ stats }) => {
             dataKey="unique_visitors"
             stroke="#48BB78"
             activeDot={{ r: 8 }}
-            name="Unique Visitors"
+            name="Visitor Website"
           />
         </LineChart>
       </ResponsiveContainer>

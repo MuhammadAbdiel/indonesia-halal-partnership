@@ -304,7 +304,7 @@ export const Dashboard = () => {
 
         <div className="flex items-center justify-between my-6">
           <div className="text-lg font-medium text-gray-700">
-            Total Unique Visitors:{" "}
+            Total Visitor Website:{" "}
             <span className="text-xl font-bold text-green-600">
               {uniqueVisitors}
             </span>
@@ -345,7 +345,7 @@ export const Dashboard = () => {
               <ul className="list-disc list-inside mt-2">
                 {Object.entries(pageVisits).map(([page, count]) => (
                   <li key={page} className="text-gray-600">
-                    <strong>{page}</strong>: {count} unique visitors
+                    <strong>{page}</strong>: {count} visitor website
                   </li>
                 ))}
               </ul>
