@@ -1,12 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import {
-  FaAddressBook,
-  FaAddressCard,
-  FaCalendar,
-  FaEye,
-  FaFileAlt,
-} from "react-icons/fa";
+import DataTable from "react-data-table-component";
 
 export const Dashboard = () => {
   const [stats, setStats] = useState([]);
@@ -82,6 +76,216 @@ export const Dashboard = () => {
     }
   };
 
+  const columns = [
+    {
+      name: "Page Visited",
+      selector: (row: any) => row.page_visited,
+      sortable: true,
+    },
+    {
+      name: "IP Address",
+      selector: (row: any) => row.ip_address,
+      sortable: true,
+    },
+    {
+      name: "Location",
+      selector: (row: any) => `${row.country}, ${row.region}, ${row.city}`,
+      sortable: true,
+      grow: 2,
+    },
+    {
+      name: "Visit Date",
+      selector: (row: any) => `${row.visit_month} - ${row.visit_year}`,
+      sortable: true,
+    },
+    {
+      name: "Visits",
+      selector: (row: any) => row.visit_count,
+      sortable: true,
+    },
+  ];
+
+  const customStyles = {
+    table: {
+      style: {
+        backgroundColor: "#ffffff",
+        borderRadius: "8px",
+        boxShadow:
+          "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+        border: "1px solid #E2E8F0",
+      },
+    },
+    header: {
+      style: {
+        fontSize: "22px",
+        fontWeight: "700",
+        color: "#1A202C", // Darker text for better contrast
+        backgroundColor: "#F7FAFC",
+        borderTopLeftRadius: "8px",
+        borderTopRightRadius: "8px",
+        padding: "20px",
+        borderBottom: "2px solid #CBD5E0",
+      },
+    },
+    subHeader: {
+      style: {
+        backgroundColor: "#F7FAFC",
+        minHeight: "52px",
+        paddingLeft: "16px",
+        paddingRight: "16px",
+      },
+    },
+    headRow: {
+      style: {
+        backgroundColor: "#EDF2F7",
+        minHeight: "56px",
+        borderBottomWidth: "1px",
+        borderBottomColor: "#CBD5E0",
+      },
+    },
+    headCells: {
+      style: {
+        fontSize: "14px",
+        fontWeight: "600",
+        color: "#2D3748",
+        backgroundColor: "#EDF2F7",
+        padding: "12px 16px",
+        borderRight: "1px solid #E2E8F0",
+        letterSpacing: "0.05em",
+        textTransform: "uppercase",
+        "&:last-child": {
+          borderRight: "none",
+        },
+      },
+      activeSortStyle: {
+        color: "#2B6CB0",
+        "&:hover": {
+          color: "#2C5282",
+        },
+      },
+    },
+    rows: {
+      style: {
+        fontSize: "14px",
+        fontWeight: "400",
+        color: "#4A5568",
+        minHeight: "48px",
+        "&:not(:last-of-type)": {
+          borderBottomStyle: "solid",
+          borderBottomWidth: "1px",
+          borderBottomColor: "#E2E8F0",
+        },
+        "&:hover": {
+          backgroundColor: "#F7FAFC",
+          transition: "all .2s ease-in-out",
+          transform: "translateY(-1px)",
+          boxShadow: "0 2px 4px 0 rgba(0,0,0,0.05)",
+        },
+        cursor: "pointer",
+      },
+      stripedStyle: {
+        backgroundColor: "#F7FAFC",
+      },
+      selectedHighlightStyle: {
+        backgroundColor: "#EBF4FF",
+        color: "#2B6CB0",
+        fontWeight: "500",
+      },
+    },
+    cells: {
+      style: {
+        padding: "12px 16px",
+        "&:not(:last-of-type)": {
+          borderRightStyle: "solid",
+          borderRightWidth: "1px",
+          borderRightColor: "#E2E8F0",
+        },
+      },
+    },
+    pagination: {
+      style: {
+        fontSize: "13px",
+        minHeight: "56px",
+        borderTopStyle: "solid",
+        borderTopWidth: "1px",
+        borderTopColor: "#E2E8F0",
+        backgroundColor: "#F7FAFC",
+        borderBottomLeftRadius: "8px",
+        borderBottomRightRadius: "8px",
+      },
+      pageButtonsStyle: {
+        borderRadius: "6px",
+        height: "32px",
+        minWidth: "32px",
+        padding: "0 6px",
+        margin: "0 4px",
+        cursor: "pointer",
+        transition: "0.2s ease-in-out",
+        backgroundColor: "#ffffff",
+        border: "1px solid #E2E8F0",
+        "&:disabled": {
+          cursor: "unset",
+          color: "#A0AEC0",
+          fill: "#A0AEC0",
+        },
+        "&:hover:not(:disabled)": {
+          backgroundColor: "#EDF2F7",
+        },
+        "&:focus": {
+          outline: "none",
+          boxShadow: "0 0 0 2px rgba(66, 153, 225, 0.5)",
+        },
+      },
+    },
+    noData: {
+      style: {
+        padding: "24px",
+        backgroundColor: "#F7FAFC",
+        borderRadius: "8px",
+        color: "#4A5568",
+        fontSize: "16px",
+      },
+    },
+    progress: {
+      style: {
+        backgroundColor: "#F7FAFC",
+        color: "#2B6CB0",
+      },
+    },
+    expanderRow: {
+      style: {
+        backgroundColor: "#F7FAFC",
+        color: "#4A5568",
+      },
+    },
+  };
+
+  const getThemedStyles = (theme = "light") => {
+    const themes: any = {
+      light: customStyles,
+      dark: {
+        ...customStyles,
+        table: {
+          style: {
+            ...customStyles.table.style,
+            backgroundColor: "#1A202C",
+            border: "1px solid #2D3748",
+          },
+        },
+        header: {
+          style: {
+            ...customStyles.header.style,
+            backgroundColor: "#2D3748",
+            color: "#F7FAFC",
+            borderBottom: "2px solid #4A5568",
+          },
+        },
+      },
+    };
+
+    return themes[theme] || themes.light;
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 py-10 px-5">
       <div className="max-w-5xl mx-auto bg-white shadow-xl rounded-lg p-8">
@@ -126,10 +330,6 @@ export const Dashboard = () => {
               <option value="12">December</option>
             </select>
           </div>
-
-          <div className="bg-green-100 text-green-700 px-4 py-2 rounded-full shadow-sm">
-            <FaEye className="inline mr-2" /> {uniqueVisitors} Unique Visitors
-          </div>
         </div>
 
         {selectedMonth != "" && (
@@ -154,65 +354,14 @@ export const Dashboard = () => {
         )}
 
         <div className="overflow-x-auto">
-          <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
-            <thead>
-              <tr className="bg-gray-800 text-white uppercase text-sm leading-normal">
-                <th className="py-3 px-6 text-left">
-                  <FaFileAlt className="inline mr-2" />
-                  Page Visited
-                </th>
-                <th className="py-3 px-6 text-left">
-                  <FaAddressCard className="inline mr-2" />
-                  IP Address
-                </th>
-                <th className="py-3 px-6 text-left">
-                  <FaAddressBook className="inline mr-2" />
-                  Location
-                </th>
-                <th className="py-3 px-6 text-center">
-                  <FaCalendar className="inline mr-2" />
-                  Month
-                </th>
-                <th className="py-3 px-6 text-center">
-                  <FaEye className="inline mr-2" />
-                  Visits
-                </th>
-              </tr>
-            </thead>
-            <tbody className="text-gray-700 text-sm font-light">
-              {filteredStats.length > 0 ? (
-                filteredStats.map((stat: any, index) => (
-                  <tr
-                    key={index}
-                    className={`border-b border-gray-200 hover:bg-gray-100 ${
-                      index % 2 === 0 ? "bg-gray-50" : "bg-white"
-                    }`}
-                  >
-                    <td className="py-3 px-6 text-left">{stat.page_visited}</td>
-                    <td className="py-3 px-6 text-left">{stat.ip_address}</td>
-                    <td className="py-3 px-6 text-left">
-                      {stat.country}, {stat.region}, {stat.city}
-                    </td>
-                    <td className="py-3 px-6 text-center">
-                      {stat.visit_month} - {stat.visit_year}
-                    </td>
-                    <td className="py-3 px-6 text-center">
-                      {stat.visit_count}
-                    </td>
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td
-                    colSpan={5}
-                    className="text-center py-6 text-gray-500 font-medium"
-                  >
-                    No visitor data available.
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+          <DataTable
+            columns={columns}
+            data={filteredStats}
+            pagination
+            highlightOnHover
+            defaultSortFieldId={1}
+            customStyles={getThemedStyles("light")}
+          />
         </div>
       </div>
     </div>
