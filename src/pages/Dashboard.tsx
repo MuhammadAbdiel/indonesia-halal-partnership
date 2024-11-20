@@ -13,6 +13,7 @@ export const Dashboard = () => {
   const [uniqueVisitors, setUniqueVisitors] = useState(0);
   const [filteredStats, setFilteredStats] = useState([]);
   const [selectedMonth, setSelectedMonth] = useState("");
+  const [pageVisits, setPageVisits] = useState<Record<string, number>>({});
 
   useEffect(() => {
     const fetchStats = async () => {
@@ -41,6 +42,7 @@ export const Dashboard = () => {
 
     if (month === "") {
       setFilteredStats(stats);
+      setPageVisits({});
     } else {
       const currentYear = new Date().getFullYear();
 
@@ -62,6 +64,21 @@ export const Dashboard = () => {
       });
 
       setFilteredStats(filtered);
+
+      const pageVisitsCount: Record<string, Set<string>> = {};
+      filtered.forEach((stat: any) => {
+        if (!pageVisitsCount[stat.page_visited]) {
+          pageVisitsCount[stat.page_visited] = new Set();
+        }
+        pageVisitsCount[stat.page_visited].add(stat.ip_address);
+      });
+
+      const pageVisitsCountFinal: Record<string, number> = {};
+      for (const page in pageVisitsCount) {
+        pageVisitsCountFinal[page] = pageVisitsCount[page].size;
+      }
+
+      setPageVisits(pageVisitsCountFinal);
     }
   };
 
@@ -114,6 +131,27 @@ export const Dashboard = () => {
             <FaEye className="inline mr-2" /> {uniqueVisitors} Unique Visitors
           </div>
         </div>
+
+        {selectedMonth != "" && (
+          <div className="mb-6">
+            <h2 className="text-lg font-semibold text-gray-700">
+              Page Visits in Selected Month
+            </h2>
+            {Object.keys(pageVisits).length > 0 ? (
+              <ul className="list-disc list-inside mt-2">
+                {Object.entries(pageVisits).map(([page, count]) => (
+                  <li key={page} className="text-gray-600">
+                    <strong>{page}</strong>: {count} unique visitors
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-gray-500 mt-2">
+                No data available for this month.
+              </p>
+            )}
+          </div>
+        )}
 
         <div className="overflow-x-auto">
           <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
