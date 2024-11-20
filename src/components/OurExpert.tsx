@@ -43,7 +43,7 @@ export const OurExpert = () => {
       image: dirProd,
     },
     {
-      name: "SENIOR ACCOUNTING EXPERT",
+      name: "SENIOR ACCOUNTING EXPERT P3H (BPJPH) : A-517/BD.II/P.II.II/ KP.02/11/2024",
       image: dirkeu,
     },
     {
