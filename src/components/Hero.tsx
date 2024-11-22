@@ -66,6 +66,7 @@ export const Hero = () => {
                     smooth={true}
                     duration={2000}
                     className="hover:text-halal-lime transition-all cursor-pointer"
+                    href="#regulations"
                   >
                     Sertifikat Halal
                   </Link>
@@ -76,6 +77,7 @@ export const Hero = () => {
                     smooth={true}
                     duration={2000}
                     className="hover:text-halal-lime transition-all cursor-pointer"
+                    href="#halal-product"
                   >
                     Produk Halal
                   </Link>
@@ -86,6 +88,7 @@ export const Hero = () => {
                     smooth={true}
                     duration={2000}
                     className="hover:text-halal-lime transition-all cursor-pointer"
+                    href="#company-history"
                   >
                     Company History
                   </Link>
@@ -96,6 +99,7 @@ export const Hero = () => {
                     smooth={true}
                     duration={2000}
                     className="hover:text-halal-lime transition-all cursor-pointer"
+                    href="#vision"
                   >
                     Visi & Misi
                   </Link>
@@ -106,6 +110,7 @@ export const Hero = () => {
                     smooth={true}
                     duration={2000}
                     className="hover:text-halal-lime transition-all cursor-pointer"
+                    href="#choose-us"
                   >
                     Choose Us
                   </Link>
@@ -116,6 +121,7 @@ export const Hero = () => {
                     smooth={true}
                     duration={2000}
                     className="hover:text-halal-lime transition-all cursor-pointer"
+                    href="#our-team"
                   >
                     Our Team
                   </Link>
@@ -126,6 +132,7 @@ export const Hero = () => {
                     smooth={true}
                     duration={2000}
                     className="hover:text-halal-lime transition-all cursor-pointer"
+                    href="#our-expert"
                   >
                     Our Expert
                   </Link>
@@ -136,6 +143,7 @@ export const Hero = () => {
                     smooth={true}
                     duration={2000}
                     className="hover:text-halal-lime transition-all cursor-pointer"
+                    href="#testimonials"
                   >
                     Testimonials
                   </Link>
@@ -146,6 +154,7 @@ export const Hero = () => {
                     smooth={true}
                     duration={2000}
                     className="hover:text-halal-lime transition-all cursor-pointer"
+                    href="#gallery"
                   >
                     Gallery
                   </Link>
@@ -199,6 +208,7 @@ export const Hero = () => {
                 smooth={true}
                 duration={2000}
                 className="hover:text-halal-lime transition-all cursor-pointer"
+                href="#regulations"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Sertifikat Halal
@@ -210,6 +220,7 @@ export const Hero = () => {
                 smooth={true}
                 duration={2000}
                 className="hover:text-halal-lime transition-all cursor-pointer"
+                href="#halal-product"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Produk Halal
@@ -221,6 +232,7 @@ export const Hero = () => {
                 smooth={true}
                 duration={2000}
                 className="hover:text-halal-lime transition-all cursor-pointer"
+                href="#company-history"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Company History
@@ -232,6 +244,7 @@ export const Hero = () => {
                 smooth={true}
                 duration={2000}
                 className="hover:text-halal-lime transition-all cursor-pointer"
+                href="#vision"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Visi & Misi
@@ -243,6 +256,7 @@ export const Hero = () => {
                 smooth={true}
                 duration={2000}
                 className="hover:text-halal-lime transition-all cursor-pointer"
+                href="#choose-us"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Choose Us
@@ -254,6 +268,7 @@ export const Hero = () => {
                 smooth={true}
                 duration={2000}
                 className="hover:text-halal-lime transition-all cursor-pointer"
+                href="#our-team"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Our Team
@@ -265,6 +280,7 @@ export const Hero = () => {
                 smooth={true}
                 duration={2000}
                 className="hover:text-halal-lime transition-all cursor-pointer"
+                href="#our-expert"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Our Expert
@@ -276,6 +292,7 @@ export const Hero = () => {
                 smooth={true}
                 duration={2000}
                 className="hover:text-halal-lime transition-all cursor-pointer"
+                href="#testimonials"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Testimonials
@@ -287,6 +304,7 @@ export const Hero = () => {
                 smooth={true}
                 duration={2000}
                 className="hover:text-halal-lime transition-all cursor-pointer"
+                href="#gallery"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Gallery

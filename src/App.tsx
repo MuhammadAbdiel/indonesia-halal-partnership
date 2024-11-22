@@ -16,6 +16,7 @@ import { Gallery } from "./components/Gallery";
 import axios from "axios";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Dashboard } from "./pages/Dashboard";
+import { Helmet } from "react-helmet";
 
 export const App = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -75,6 +76,23 @@ export const App = () => {
 
   return (
     <BrowserRouter>
+      <Helmet>
+        <title>Indonesia Halal Partnership</title>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <meta
+          name="description"
+          content="Menjadi pusat Layanan Halal terkemuka yang mendukung Pelaku Usaha dalam mengembangkan produk halal di Indonesia memasuki pasar global."
+        />
+        <meta
+          name="keywords"
+          content="IHP, INDONESIA HALAL PARTNER, PT IHP, PT Indonesia Halal Partnership, Sertifikat Halal, Produk Halal, Kota Malang, Provinsi Jawa Timur"
+        />
+        <meta name="author" content="INDONESIA HALAL PARTNER" />
+        <link rel="canonical" href="https://www.indonesiahalalpartner.com/" />
+      </Helmet>
+
       <Routes>
         <Route
           path="/"
