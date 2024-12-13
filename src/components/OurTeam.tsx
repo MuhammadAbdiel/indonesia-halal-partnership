@@ -52,11 +52,6 @@ export const OurTeam = () => {
       image: wadirut,
     },
     {
-      name: "Gusper N, ST",
-      position: "DirProd",
-      image: dirProd,
-    },
-    {
       name: "Akhmad Fattah, S.Sos",
       position: "Direktur Marketing",
       image: direkturMarketing,
