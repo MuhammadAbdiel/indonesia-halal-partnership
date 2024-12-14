@@ -45,7 +45,8 @@ export const OurExpert = () => {
       image: wadirut,
     },
     {
-      name: "RHA : 14/VI/LPPPHEWI/RHA/2024",
+      name: "",
+      // name: "RHA : 14/VI/LPPPHEWI/RHA/2024",
       image: dirProd,
     },
     {
