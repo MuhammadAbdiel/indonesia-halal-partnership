@@ -45,6 +45,10 @@ export const OurExpert = () => {
       image: wadirut,
     },
     {
+      name: "RHA : 14/VI/LPPPHEWI/RHA/2024",
+      image: dirProd,
+    },
+    {
       name: "PENYELIA HALAL : R.DN - 1.2.0122",
       image: direkturMarketing,
     },
