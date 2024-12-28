@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
-import { bumbuRawon, ownerCafe, ukm } from "../assets";
+import {
+  aaService,
+  bumbuRawon,
+  malay,
+  ownerCafe,
+  sopTeja,
+  ukm,
+} from "../assets";
 
 export const Testimonials = () => {
   const testimonials = [
@@ -23,6 +30,27 @@ export const Testimonials = () => {
         "Alhamdulillah, sampai nangis saya, akhirnya punya Sertifikat Halal, supaya bisa mengembangkan penjualan dan diikutkan kegiatan-kegiatan promosi karena banyak produk impor sejenis.",
       location: "",
       image: ukm,
+    },
+    {
+      name: "D’Eng Malay Kitchen-Owner",
+      content:
+        "Dengan selesai urus Proses Halal Costumer D'Eng Malay Kitchen jadi makin percaya dan Kami sebagai Pelaku usaha tambah value terutama kepercayaan tentang Produk Halal kami ada  2 Cabang kami di Revo Mal  dan Pluit Village.",
+      location: "",
+      image: malay,
+    },
+    {
+      name: "SOP Teja - Owner",
+      content:
+        "Kami Sop Teja Karena lingkungan kami Kompleks Sertifikat Halal menjadikan Ke percayaan Costumer kami Dengan Info ke Warga kompleks Pelanggan Menyikapi dengan Baik",
+      location: "",
+      image: sopTeja,
+    },
+    {
+      name: "AA Service Food",
+      content:
+        "AA SERVICE FOOD .Terbitnya Sertifikat bagi kami jadi tambah kepercayaan dari vendor ,terutama Vendor Utama kami Group Kawan Lama,dan Alhamdulillah pas terbit dapat tender Acara Kunjungan Peminpin Gereja Dunia..Berkat terbit Sertifikat Halal ini..terima kasih",
+      location: "",
+      image: aaService,
     },
   ];
 

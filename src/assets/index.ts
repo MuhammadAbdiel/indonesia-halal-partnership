@@ -33,6 +33,41 @@ import halalTalks from "./images/halal-talks.jpg";
 import conferenceHalalInternational from "./images/conference-halal-international.jpg";
 import auditor from "./images/auditor.jpg";
 import direkturMarketing from "./images/direktur-marketing.jpg";
+import image2764 from "./images/2764.png";
+import image2765 from "./images/2765.jpg";
+import halmahera from "./images/halmahera.jpg";
+import koes from "./images/koes.jpg";
+import sri from "./images/sri.jpg";
+import febrianto from "./images/febrianto.jpg";
+import khairiyah from "./images/khairiyah.jpg";
+import dziki from "./images/dziki.png";
+import umar from "./images/umar.jpg";
+import sariba from "./images/sariba.png";
+import galung from "./images/galung.jpg";
+import julkarnain from "./images/julkarnain.png";
+import istain from "./images/istain.png";
+import mega from "./images/mega.png";
+import lukita from "./images/lukita.jpg";
+import enden from "./images/enden.jpg";
+import irma from "./images/irma.jpg";
+import novi from "./images/novi.jpg";
+import nurrahma from "./images/nurrahma.jpg";
+import aztry from "./images/aztry.jpg";
+import saprizal from "./images/saprizal.jpg";
+import faiqotul from "./images/faiqotul.png";
+import muzammil from "./images/muzammil.png";
+import titalina from "./images/titalina.png";
+import hartono from "./images/hartono.jpg";
+import kristina from "./images/kristina.jpg";
+import sriutami from "./images/sriutami.jpg";
+import dwidja from "./images/dwidja.png";
+import roesmadji from "./images/roesmadji.jpg";
+import malay from "./images/malay.png";
+import sopTeja from "./images/sop-teja.png";
+import aaService from "./images/aa-service.png";
+import signingLph from "./images/signing-lph.jpg";
+import silaturrahmi from "./images/silaturrahmi.jpg";
+import coffeeMorning from "./images/coffee-morning.jpg";
 
 export {
   logoPartnership,
@@ -70,4 +105,39 @@ export {
   conferenceHalalInternational,
   auditor,
   direkturMarketing,
+  image2764,
+  image2765,
+  halmahera,
+  koes,
+  sri,
+  febrianto,
+  khairiyah,
+  dziki,
+  umar,
+  sariba,
+  galung,
+  julkarnain,
+  istain,
+  mega,
+  lukita,
+  enden,
+  irma,
+  novi,
+  nurrahma,
+  aztry,
+  saprizal,
+  faiqotul,
+  muzammil,
+  titalina,
+  hartono,
+  kristina,
+  sriutami,
+  dwidja,
+  roesmadji,
+  malay,
+  sopTeja,
+  aaService,
+  signingLph,
+  silaturrahmi,
+  coffeeMorning,
 };

@@ -1,89 +1,54 @@
 import {
-  auditor,
-  dewanPakar,
-  direkturMarketing,
-  dirIt,
-  dirkerma,
-  dirkeu,
-  dirProd,
-  dirut,
-  image2764,
-  image2765,
-  komisarisDua,
-  komisarisSatu,
-  komisarisUtama,
-  management,
-  wadirut,
+  dwidja,
+  faiqotul,
+  hartono,
+  kristina,
+  muzammil,
+  roesmadji,
+  sriutami,
+  titalina,
 } from "../assets";
 
-export const OurExpert = () => {
+export const PendampingHalal = () => {
   const teamMembers = [
     {
-      name: "PROFESSOR HALAL DUNIA",
-      image: dewanPakar,
+      name: "Faiqotul Himah, A.Md, Keb <br /> A-270/BD.II/P.II.II/KP.02/12/2023",
+      image: faiqotul,
     },
     {
-      name: "K-204/ADM/Halal/LSP-MUI/XII/2024 <br /> Penyelia Halal : 2995/PHI.4760/B/LPK-HI/XII/2024",
-      image: dirProd,
+      name: "Ahmad Muzammil <br /> A-729/BD.II/P.II.II/KP.02/12/2023",
+      image: muzammil,
     },
     {
-      name: "PENYELIA HALAL : R.DN - 1.2.0122",
-      image: direkturMarketing,
+      name: "Titalina, IR <br /> A-740/BD.II/P.II.II/KP.02/08/2023",
+      image: titalina,
     },
     {
-      name: "P3H (BPJPH) : <br /> A-2424/BD.II/P.II.II/ KP.02/05/2024 <br /> Penyelia Halal <br /> 2971/PHI.4736/B/LPK-HI/XII/2024",
-      image: komisarisUtama,
+      name: "Dwi Budi Hartono, SE, MM <br /> A-709/BD.II/P.II.II/KP.02/03/2024",
+      image: hartono,
     },
     {
-      name: "AHA.1644.01879.2023",
-      image: auditor,
+      name: "Kristina Noviawati, SP <br /> A-833/BD.II/P.II.II/KP.02/08/2023",
+      image: kristina,
     },
     {
-      name: "P3H (BPJPH) : A-987/BD.II/P.II.II/ KP.02/08/2024",
-      image: komisarisDua,
+      name: "Sri Utami, ST <br /> A-1331/BD.II/P.II.II/KP.02/11/2023",
+      image: sriutami,
     },
     {
-      name: "P3H (BPJPH) : A-621/BD.II/P.II.II/ KP.02/08/2023",
-      image: komisarisSatu,
+      name: "Dwidja Wahyono, SE <br /> A-516/BD.II/P.II.II/KP.02/11/2024",
+      image: dwidja,
     },
     {
-      name: "2765/AHI.3919/B/LPK-HI/XI/2024",
-      image: image2765,
-    },
-    {
-      name: "P3H (BPJPH) : A-810/BD.II/P.II.II/ KP.02/08/2023",
-      image: dirut,
-    },
-    {
-      name: "P3H (BPJPH) : A-1020/BD.II/P.II.II/ KP.02/03/2024 <br /> Penyelia Halal <br /> 2946/PHI.4711/B/LPK-HI/XII/2024",
-      image: wadirut,
-    },
-    {
-      name: "2764/AHI.3918/B/LPK-HI/XI/2024",
-      image: image2764,
-    },
-    {
-      name: "SENIOR ACCOUNTING EXPERT P3H (BPJPH) : <br /> A-517/BD.II/P.II.II/ KP.02/11/2024",
-      image: dirkeu,
-    },
-    {
-      name: "P3H (BPJPH) : A-405/BD.II/P.II.II/ KP.02/08/2023",
-      image: dirIt,
-    },
-    {
-      name: "ADMIN <br /> P3H (BPJPH) : A-750/BD.II/P.II.II/KP.02/11/2024",
-      image: management,
-    },
-    {
-      name: "P3H (BPJPH) : A-1669/BD.II/P.II.II/ KP.02/05/2024",
-      image: dirkerma,
+      name: "Roesmadji <br /> A-908/BD.II/P.II.II/KP.02/10/2024",
+      image: roesmadji,
     },
   ];
 
   return (
     <section
       className="bg-[#b7a2cd] py-20 px-6 md:px-16 lg:px-32"
-      id="our-expert"
+      id="pendamping"
     >
       <div className="relative" data-aos="fade-down">
         <div className="flex items-center justify-center space-x-2 text-white mb-4">
@@ -96,7 +61,7 @@ export const OurExpert = () => {
 
         {/* Title */}
         <h2 className="text-[32px] md:text-5xl text-center font-bold text-white mb-12">
-          Our Expert
+          Pendamping Halal IHP
         </h2>
 
         {/* Team Members */}

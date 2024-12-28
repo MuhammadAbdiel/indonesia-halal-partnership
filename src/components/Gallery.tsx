@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
-import { conferenceHalalInternational, halalTalks } from "../assets";
+import {
+  coffeeMorning,
+  conferenceHalalInternational,
+  halalTalks,
+  signingLph,
+  silaturrahmi,
+} from "../assets";
 
 export const Gallery = () => {
   const galleryItems = [
@@ -7,13 +13,31 @@ export const Gallery = () => {
       title: "HALAL TALKS - LPH UB",
       description:
         "HALAL TALKS - LPH UB, dihadiri Narsum dari Sekretaris Komite Fatwa MUI Jatim, Dewan Pakar LPH UB, Halal Food Analysis (University Malaysia Sabah)",
-      image: conferenceHalalInternational, // Replace with your image path
+      image: conferenceHalalInternational,
     },
     {
       title: "Conference Halal International & Trading Expo",
       description:
         "The 3rd H2O Conference Halal International & Trading EXPO Indonesia",
-      image: halalTalks, // Replace with your image path
+      image: halalTalks,
+    },
+    {
+      title: "SIGNING LPH Hidayatullah - IHP",
+      description:
+        "Penandatanganan Kerjasama antara LPH Hidayatullah dan IHP di Jakarta",
+      image: signingLph,
+    },
+    {
+      title: "SILATURRAHMI - LPH UIN Malang",
+      description:
+        "Silaturrahmi Pra Kerjasama UIN Maulana Malik Ibrahim Malang - IHP",
+      image: silaturrahmi,
+    },
+    {
+      title: "IHP for INTERNATIONAL PARTNERS",
+      description:
+        "Coffee Morning bersama Dewan Pakar IHP, Poffessor Irwandi Jaswir",
+      image: coffeeMorning,
     },
   ];
 

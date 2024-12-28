@@ -17,6 +17,9 @@ import axios from "axios";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Dashboard } from "./pages/Dashboard";
 import { Helmet } from "react-helmet";
+import { TableOfContents } from "./components/TableOfContents";
+import { PenyeliaHalal } from "./components/PenyeliaHalal";
+import { PendampingHalal } from "./components/PendampingHalal";
 
 export const App = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -99,6 +102,7 @@ export const App = () => {
           element={
             <>
               <Hero />
+              <TableOfContents />
               <Regulations />
               <HalalProduct />
               <CompanyHistory />
@@ -106,6 +110,8 @@ export const App = () => {
               <ChooseUs />
               <OurTeam />
               <OurExpert />
+              <PenyeliaHalal />
+              <PendampingHalal />
               <Testimonials />
               <Gallery />
               <Footer />

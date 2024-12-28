@@ -62,6 +62,17 @@ export const Hero = () => {
               <ul className="flex space-x-6 text-white font-semibold text-lg whitespace-nowrap px-4">
                 <li>
                   <Link
+                    to="toc"
+                    smooth={true}
+                    duration={2000}
+                    className="hover:text-halal-lime transition-all cursor-pointer"
+                    href="#toc"
+                  >
+                    Daftar Isi
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     to="regulations"
                     smooth={true}
                     duration={2000}
@@ -202,6 +213,18 @@ export const Hero = () => {
           }`}
         >
           <ul className="bg-halal-greenGrayTransparent text-white flex flex-col space-y-4 py-4 px-6">
+            <li>
+              <Link
+                to="toc"
+                smooth={true}
+                duration={2000}
+                className="hover:text-halal-lime transition-all cursor-pointer"
+                href="#toc"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Daftar Isi
+              </Link>
+            </li>
             <li>
               <Link
                 to="regulations"

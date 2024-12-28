@@ -22,9 +22,9 @@ export const OurTeam = () => {
       image: dewanPakar,
     },
     {
-      name: "Rafi Chanssa Ardiannantha, S.Pt",
-      position: "Auditor",
-      image: auditor,
+      name: "Azman, SKM, M.M",
+      position: "Komisaris",
+      image: komisarisDua,
     },
     {
       name: "M Monarita D, SKeb, M.Si",
@@ -32,14 +32,14 @@ export const OurTeam = () => {
       image: komisarisUtama,
     },
     {
-      name: "Azman, SKM, M.M",
-      position: "Komisaris",
-      image: komisarisDua,
-    },
-    {
       name: "Ainur R Rinata, SSos, M.M",
       position: "Komisaris",
       image: komisarisSatu,
+    },
+    {
+      name: "Rafi Chanssa Ardiannantha, S.Pt",
+      position: "Auditor",
+      image: auditor,
     },
     {
       name: "Sri Ida W, S.Pd",
