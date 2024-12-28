@@ -17,7 +17,7 @@ import axios from "axios";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Dashboard } from "./pages/Dashboard";
 import { Helmet } from "react-helmet";
-import { TableOfContents } from "./components/TableOfContents";
+// import { TableOfContents } from "./components/TableOfContents";
 import { PenyeliaHalal } from "./components/PenyeliaHalal";
 import { PendampingHalal } from "./components/PendampingHalal";
 

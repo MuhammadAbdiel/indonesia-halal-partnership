@@ -37,7 +37,7 @@ export const PendampingHalal = () => {
     },
     {
       name: "Dwidja Wahyono, SE <br /> A-516/BD.II/P.II.II/KP.02/11/2024",
-      image: dwidja,
+      image: "",
     },
     {
       name: "Roesmadji <br /> A-908/BD.II/P.II.II/KP.02/10/2024",
@@ -73,11 +73,13 @@ export const PendampingHalal = () => {
             >
               {/* Member Image */}
               <div className="relative w-32 h-32 mb-4">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full rounded-full border-4 border-white object-cover"
-                />
+                {member.image && (
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full rounded-full border-4 border-white object-contain bg-transparent"
+                  />
+                )}
               </div>
               {/* Member Name */}
               <p
