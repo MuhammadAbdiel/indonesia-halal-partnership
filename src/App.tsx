@@ -102,7 +102,7 @@ export const App = () => {
           element={
             <>
               <Hero />
-              <TableOfContents />
+              {/* <TableOfContents /> */}
               <Regulations />
               <HalalProduct />
               <CompanyHistory />
