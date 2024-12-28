@@ -1,5 +1,5 @@
 import {
-  dwidja,
+  // dwidja,
   faiqotul,
   hartono,
   kristina,
