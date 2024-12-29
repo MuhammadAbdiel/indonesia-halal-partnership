@@ -66,7 +66,7 @@ export const PendampingHalal = () => {
 
         {/* Title */}
         <h2 className="text-[32px] md:text-5xl text-center font-bold text-white mb-12">
-          Pendamping Halal IHP
+          Pendamping PP Halal IHP
         </h2>
 
         {/* Team Members */}

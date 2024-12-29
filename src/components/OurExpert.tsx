@@ -8,7 +8,8 @@ import {
   dirProd,
   dirut,
   image2764,
-  image2765,
+  // image2765,
+  image27652,
   komisarisDua,
   komisarisSatu,
   komisarisUtama,
@@ -48,7 +49,7 @@ export const OurExpert = () => {
     },
     {
       name: "2765/AHI.3919/B/LPK-HI/XI/2024",
-      image: image2765,
+      image: image27652,
     },
     {
       name: "P3H (BPJPH) : A-810/BD.II/P.II.II/ KP.02/08/2023",

@@ -35,6 +35,7 @@ import auditor from "./images/auditor.jpg";
 import direkturMarketing from "./images/direktur-marketing.jpg";
 import image2764 from "./images/2764.png";
 import image2765 from "./images/2765.jpg";
+import image27652 from "./images/2765-2.jpg";
 import halmahera from "./images/halmahera.jpg";
 import koes from "./images/koes.jpg";
 import sri from "./images/sri.jpg";
@@ -108,6 +109,7 @@ export {
   direkturMarketing,
   image2764,
   image2765,
+  image27652,
   halmahera,
   koes,
   sri,
