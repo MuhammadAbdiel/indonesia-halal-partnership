@@ -85,33 +85,42 @@ export const Gallery = () => {
             className="transition-transform duration-500 ease-in-out flex"
             style={{ transform: `translateX(-${activeIndex * 100}%)` }}
           >
-            {galleryItems.map((item, index) => (
-              <div
-                key={index}
-                className="min-w-full flex flex-col md:flex-row items-center justify-center gap-8 px-2"
-              >
-                {/* Image Container with Custom Shape */}
-                <div className="relative w-full md:w-1/2 aspect-video">
-                  <div className="absolute inset-0 bg-white rounded-[100px] overflow-hidden transform">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-contain p-4"
-                    />
-                  </div>
-                </div>
+            {galleryItems.map((item, index) => {
+              const lastItemIndex = galleryItems.length - 1;
 
-                {/* Content Container */}
-                <div className="w-full md:w-1/2 space-y-4">
-                  <div className="bg-emerald-500 text-white text-center py-3 px-6 rounded-full inline-block">
-                    {item.title}
+              return (
+                <div
+                  key={index}
+                  className="min-w-full flex flex-col md:flex-row items-center justify-center gap-8 px-2"
+                >
+                  {/* Image Container with Custom Shape */}
+                  <div
+                    className={`relative ${
+                      index === lastItemIndex
+                        ? "w-full md:w-1/4 aspect-[1/2]" // Changed aspect ratio for vertical shape
+                        : "w-full md:w-1/2 aspect-video"
+                    }`}
+                  >
+                    <div className="absolute inset-0 bg-white rounded-[100px] overflow-hidden transform">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-contain p-4"
+                      />
+                    </div>
                   </div>
-                  <p className="text-gray-700 bg-white/80 backdrop-blur-sm p-4 rounded-lg">
-                    {item.description}
-                  </p>
+                  {/* Content Container */}
+                  <div className="w-full md:w-1/2 space-y-4">
+                    <div className="bg-emerald-500 text-white text-center py-3 px-6 rounded-full inline-block">
+                      {item.title}
+                    </div>
+                    <p className="text-gray-700 bg-white/80 backdrop-blur-sm p-4 rounded-lg">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Navigation */}
