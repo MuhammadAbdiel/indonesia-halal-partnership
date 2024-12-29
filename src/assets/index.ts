@@ -62,6 +62,7 @@ import kristina from "./images/kristina.jpg";
 import sriutami from "./images/sriutami.jpg";
 import dwidja from "./images/dwidja.png";
 import roesmadji from "./images/roesmadji.jpg";
+import srimanfaatin from "./images/srimanfaatin.jpg";
 import malay from "./images/malay.png";
 import sopTeja from "./images/sop-teja.png";
 import aaService from "./images/aa-service.png";
@@ -134,6 +135,7 @@ export {
   sriutami,
   dwidja,
   roesmadji,
+  srimanfaatin,
   malay,
   sopTeja,
   aaService,

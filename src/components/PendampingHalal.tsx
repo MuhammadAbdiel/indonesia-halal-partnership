@@ -5,6 +5,7 @@ import {
   kristina,
   muzammil,
   roesmadji,
+  srimanfaatin,
   sriutami,
   titalina,
 } from "../assets";
@@ -43,6 +44,10 @@ export const PendampingHalal = () => {
       name: "Roesmadji <br /> A-908/BD.II/P.II.II/KP.02/10/2024",
       image: roesmadji,
     },
+    {
+      name: "Siti Manfaatin, SE <br />A-318/BD.II/P.II.II/KP.02/06/2023",
+      image: srimanfaatin,
+    },
   ];
 
   return (
@@ -77,7 +82,7 @@ export const PendampingHalal = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full rounded-full border-4 border-white object-contain bg-transparent"
+                    className="w-full h-full rounded-full border-4 border-white object-cover bg-transparent"
                   />
                 )}
               </div>

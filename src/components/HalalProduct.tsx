@@ -68,7 +68,7 @@ export const HalalProduct = () => {
           SUBSTANSI PRODUK HALAL
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 items-center mt-8 text-center">
+        <div className="flex overflow-x-auto md:grid md:grid-cols-5 items-center mt-8 text-center">
           {/* Bahan Halal */}
           <div className="flex flex-col items-center">
             <img
@@ -76,7 +76,9 @@ export const HalalProduct = () => {
               alt="bahan-halal"
               className="w-full max-w-[150px] md:max-w-[350px]"
             />
-            <p className="mt-2 text-xl font-semibold text-white">Bahan Halal</p>
+            <p className="mt-2 text-md md:text-xl font-semibold text-white">
+              Bahan Halal
+            </p>
           </div>
 
           {/* Plus */}
@@ -91,8 +93,8 @@ export const HalalProduct = () => {
               alt="fasilitas"
               className="w-full max-w-[150px] md:max-w-[350px]"
             />
-            <p className="mt-2 text-xl font-semibold text-white">
-              Fasilitas bebas kontaminasi bahan haram/najis
+            <p className="mt-2 text-md md:text-xl font-semibold text-white">
+              Fasilitas bebas <br /> kontaminasi bahan <br /> haram/najis
             </p>
           </div>
 
@@ -112,7 +114,7 @@ export const HalalProduct = () => {
               alt="produk-halal"
               className="w-full max-w-[150px] md:max-w-[350px]"
             />
-            <p className="mt-2 text-xl font-semibold text-white">
+            <p className="mt-2 text-md md:text-xl font-semibold text-white">
               Produk Halal
             </p>
           </div>

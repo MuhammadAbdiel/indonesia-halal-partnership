@@ -96,7 +96,7 @@ export const Gallery = () => {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover p-4"
+                      className="w-full h-full object-contain p-4"
                     />
                   </div>
                 </div>

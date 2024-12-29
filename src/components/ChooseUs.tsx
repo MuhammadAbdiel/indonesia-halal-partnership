@@ -16,7 +16,7 @@ export const ChooseUs = () => {
         </div>
 
         {/* Heading */}
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row justify-between">
           <h2 className="text-[32px] md:text-5xl font-bold text-dark-800 mb-12">
             Why Choose Us?
             <p className="text-[18px] md:text-2xl font-medium text-dark-800 mt-4">
