@@ -11,7 +11,6 @@ import komisarisSatu from "./images/komisaris-satu.jpg";
 import komisarisDua from "./images/komisaris-dua.jpg";
 import dirut from "./images/dirut.jpg";
 import wadirut from "./images/wadirut.jpg";
-import dirProd from "./images/dirprod.jpg";
 import dirKerjasama from "./images/dirkerjasama.jpg";
 import dewanPakar from "./images/dewan-pakar.webp";
 import dirkeu from "./images/dirkeu.png";
@@ -33,10 +32,7 @@ import halalTalks from "./images/halal-talks.jpg";
 import conferenceHalalInternational from "./images/conference-halal-international.jpg";
 import auditor from "./images/auditor.jpg";
 import direkturMarketing from "./images/direktur-marketing.jpg";
-import image2764 from "./images/2764.png";
 import image3938 from "./images/3938.jpg";
-import image2765 from "./images/2765.jpg";
-import image27652 from "./images/2765-2.jpg";
 import halmahera from "./images/halmahera.jpg";
 import koes from "./images/koes.jpg";
 import edmon from "./images/edmon.jpg";
@@ -50,7 +46,6 @@ import syafik from "./images/syafik.jpg";
 import sri from "./images/sri.jpg";
 import febrianto from "./images/febrianto.jpg";
 import khairiyah from "./images/khairiyah.jpg";
-import dziki from "./images/dziki.png";
 import umar from "./images/umar.jpg";
 import sariba from "./images/sariba.jpg";
 import galung from "./images/galung.jpg";
@@ -63,17 +58,15 @@ import irma from "./images/irma.jpg";
 import novi from "./images/novi.jpg";
 import nurrahma from "./images/nurrahma.jpg";
 import aztry from "./images/aztry.jpg";
-import saprizal from "./images/saprizal.jpg";
 import faiqotul from "./images/faiqotul.jpg";
 import muzammil from "./images/muzammil.jpg";
-import titalina from "./images/titalina.jpg";
 import hartono from "./images/hartono.jpg";
 import kristina from "./images/kristina.jpg";
 import sriutami from "./images/sriutami.jpg";
 import dwidja from "./images/dwidja.jpg";
 import naila from "./images/naila.jpg";
+import titalina from "./images/titalina.jpg";
 import roesmadji from "./images/roesmadji.jpg";
-import srimanfaatin from "./images/srimanfaatin.jpg";
 import malay from "./images/malay.png";
 import sopTeja from "./images/sop-teja.png";
 import aaService from "./images/aa-service.png";
@@ -116,7 +109,6 @@ export {
   komisarisDua,
   dirut,
   wadirut,
-  dirProd,
   dirKerjasama,
   ownerCafe,
   bumbuRawon,
@@ -133,12 +125,10 @@ export {
   conferenceHalalInternational,
   auditor,
   direkturMarketing,
-  image2764,
   image3938,
-  image2765,
-  image27652,
   halmahera,
   koes,
+  titalina,
   edmon,
   iwan,
   parmini,
@@ -150,7 +140,6 @@ export {
   sri,
   febrianto,
   khairiyah,
-  dziki,
   umar,
   sariba,
   galung,
@@ -163,17 +152,14 @@ export {
   novi,
   nurrahma,
   aztry,
-  saprizal,
   faiqotul,
   muzammil,
-  titalina,
   hartono,
   kristina,
   sriutami,
   dwidja,
   naila,
   roesmadji,
-  srimanfaatin,
   malay,
   sopTeja,
   aaService,
