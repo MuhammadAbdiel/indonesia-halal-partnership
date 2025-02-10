@@ -83,7 +83,7 @@ export const Vision = () => {
             <div
               key={index}
               className="bg-white rounded-2xl p-8 shadow-lg transform hover:-translate-y-2 transition-transform duration-300"
-              data-aos="fade-up"
+              data-aos="fade-down"
               data-aos-delay={index * 100}
             >
               <div className="flex flex-col items-center text-center">
