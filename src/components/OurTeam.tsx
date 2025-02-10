@@ -24,7 +24,7 @@ import {
 } from "../assets";
 
 export const OurTeam = () => {
-  const teamMembers = [
+  const firstGroup = [
     {
       name: "Prof. DR. Irwandi Jaswir",
       position: "Dewan Pakar",
@@ -45,6 +45,9 @@ export const OurTeam = () => {
       position: "Komisaris",
       image: komisarisSatu,
     },
+  ];
+
+  const secondGroup = [
     {
       name: "Rafi Chanssa Ardiannantha, S.Pt",
       position: "Auditor Independent",
@@ -60,6 +63,9 @@ export const OurTeam = () => {
       position: "Wadirut",
       image: wadirut,
     },
+  ];
+
+  const thirdGroup = [
     {
       name: "Koes Priantoro, AMd. Par",
       position: "Direktur HRD",
@@ -75,6 +81,9 @@ export const OurTeam = () => {
       position: "Direktur IT",
       image: iwan,
     },
+  ];
+
+  const fourthGroup = [
     {
       name: "Mida Nopitasari, S.Sos",
       position: "Management",
@@ -85,6 +94,9 @@ export const OurTeam = () => {
       position: "Direktur Keuangan",
       image: nurrahma,
     },
+  ];
+
+  const fifthGroup = [
     {
       name: "Joelijanto Yusuf, A.Md",
       position: "Koordinator Jatim 1",
@@ -105,6 +117,9 @@ export const OurTeam = () => {
       position: "Koordinator Jateng & DIY",
       image: parmini,
     },
+  ];
+
+  const sixthGroup = [
     {
       name: "Drs. H. Edmon Hisbullathif, M.Si",
       position: "Koordinator Jabodetabek & Kaltim",
@@ -143,12 +158,12 @@ export const OurTeam = () => {
 
         {/* Title */}
         <h2 className="text-[32px] md:text-5xl text-center font-bold text-white mb-12">
-          Our Team
+          Our Structure
         </h2>
 
         {/* Team Members */}
-        <div className="grid grid-cols-center-1 md:grid-cols-center-2 lg:grid-cols-center-4 gap-12">
-          {teamMembers.map((member, index) => (
+        <div className="grid grid-cols-center-1 md:grid-cols-center-2 lg:grid-cols-center-4 gap-12 mb-12">
+          {firstGroup.map((member, index) => (
             <div
               key={index}
               className="flex flex-col items-center bg-[#d4a3a8] p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
@@ -160,7 +175,130 @@ export const OurTeam = () => {
                   alt={member.name}
                   className="w-full h-full rounded-full border-4 border-white object-cover"
                 />
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-[#B6D74A] text-xs text-white py-1 px-3 rounded shadow-md text-center">
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-[#617327] text-xs text-white py-1 px-3 rounded shadow-md text-center">
+                  {member.position}
+                </div>
+              </div>
+              {/* Member Name */}
+              <p className="text-white font-semibold text-lg text-center mt-4">
+                {member.name}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="grid grid-cols-center-1 md:grid-cols-center-2 lg:grid-cols-center-4 gap-12 mb-12">
+          {secondGroup.map((member, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center bg-[#d4a3a8] p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+            >
+              {/* Member Image */}
+              <div className="relative w-32 h-32 mb-4">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full rounded-full border-4 border-white object-cover"
+                />
+                <div
+                  className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 translate-y-1/2 
+                bg-[#0f5764] text-xs text-white py-1 px-3 rounded shadow-md text-center"
+                >
+                  {member.position}
+                </div>
+              </div>
+              {/* Member Name */}
+              <p className="text-white font-semibold text-lg text-center mt-4">
+                {member.name}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="grid grid-cols-center-1 md:grid-cols-center-2 lg:grid-cols-center-4 gap-12 mb-12">
+          {thirdGroup.map((member, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center bg-[#d4a3a8] p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+            >
+              {/* Member Image */}
+              <div className="relative w-32 h-32 mb-4">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full rounded-full border-4 border-white object-cover"
+                />
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-[#5b5066] text-xs text-white py-1 px-3 rounded shadow-md text-center">
+                  {member.position}
+                </div>
+              </div>
+              {/* Member Name */}
+              <p className="text-white font-semibold text-lg text-center mt-4">
+                {member.name}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="grid grid-cols-center-1 md:grid-cols-center-2 lg:grid-cols-center-4 gap-12 mb-12">
+          {fourthGroup.map((member, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center bg-[#d4a3a8] p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+            >
+              {/* Member Image */}
+              <div className="relative w-32 h-32 mb-4">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full rounded-full border-4 border-white object-cover"
+                />
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-[#746142] text-xs text-white py-1 px-3 rounded shadow-md text-center">
+                  {member.position}
+                </div>
+              </div>
+              {/* Member Name */}
+              <p className="text-white font-semibold text-lg text-center mt-4">
+                {member.name}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="grid grid-cols-center-1 md:grid-cols-center-2 lg:grid-cols-center-4 gap-12 mb-12">
+          {fifthGroup.map((member, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center bg-[#d4a3a8] p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+            >
+              {/* Member Image */}
+              <div className="relative w-32 h-32 mb-4">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full rounded-full border-4 border-white object-cover"
+                />
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-[#224132] text-xs text-white py-1 px-3 rounded shadow-md text-center">
+                  {member.position}
+                </div>
+              </div>
+              {/* Member Name */}
+              <p className="text-white font-semibold text-lg text-center mt-4">
+                {member.name}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="grid grid-cols-center-1 md:grid-cols-center-2 lg:grid-cols-center-4 gap-12">
+          {sixthGroup.map((member, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center bg-[#d4a3a8] p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+            >
+              {/* Member Image */}
+              <div className="relative w-32 h-32 mb-4">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full rounded-full border-4 border-white object-cover"
+                />
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-[#8b55ff] text-xs text-white py-1 px-3 rounded shadow-md text-center">
                   {member.position}
                 </div>
               </div>
