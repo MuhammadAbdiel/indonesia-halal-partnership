@@ -1,9 +1,7 @@
 import {
   aztry,
-  dziki,
   edmon,
   enden,
-  febrianto,
   galung,
   halmahera,
   irma,
@@ -17,7 +15,6 @@ import {
   novi,
   nurrahma,
   parmini,
-  saprizal,
   sariba,
   sri,
   sugito,

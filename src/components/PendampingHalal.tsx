@@ -7,7 +7,6 @@ import {
   kristina,
   muzammil,
   roesmadji,
-  srimanfaatin,
   sriutami,
   syafik,
   titalina,

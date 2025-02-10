@@ -2,21 +2,15 @@ import {
   auditor,
   dewanPakar,
   direkturMarketing,
-  dirIt,
   dirkerma,
   dirkeu,
-  dirProd,
   dirut,
-  image2764,
-  // image2765,
-  image27652,
   image3938,
   iwan,
   komisarisDua,
   komisarisSatu,
   komisarisUtama,
   management,
-  wadirut,
 } from "../assets";
 
 export const OurExpert = () => {
