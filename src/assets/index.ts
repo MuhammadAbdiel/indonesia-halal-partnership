@@ -71,6 +71,7 @@ import hartono from "./images/hartono.jpg";
 import kristina from "./images/kristina.jpg";
 import sriutami from "./images/sriutami.jpg";
 import dwidja from "./images/dwidja.jpg";
+import naila from "./images/naila.jpg";
 import roesmadji from "./images/roesmadji.jpg";
 import srimanfaatin from "./images/srimanfaatin.jpg";
 import malay from "./images/malay.png";
@@ -170,6 +171,7 @@ export {
   kristina,
   sriutami,
   dwidja,
+  naila,
   roesmadji,
   srimanfaatin,
   malay,
