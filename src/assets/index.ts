@@ -92,6 +92,9 @@ import sopteja from "./images/sopteja.jpg";
 import shinyama from "./images/shinyama.jpg";
 import lphUin from "./images/lph-uin.jpg";
 import halal from "./images/halal.jpg";
+import lppom from "./images/lppom.jpg";
+import bpjph from "./images/bpjph.jpeg";
+import ppkly from "./images/ppkly.jpg";
 
 export {
   logoPartnership,
@@ -188,4 +191,7 @@ export {
   shinyama,
   lphUin,
   halal,
+  lppom,
+  bpjph,
+  ppkly,
 };

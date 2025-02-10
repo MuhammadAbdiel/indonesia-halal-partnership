@@ -1,13 +1,16 @@
 import {
   apmiso,
   berkahJayaChicken,
+  bpjph,
   chingchong,
   cookies,
   halal,
   lily,
   lphUin,
+  lppom,
   mera,
   minang,
+  ppkly,
   roomah,
   shinyama,
   sopteja,
@@ -16,20 +19,21 @@ import {
 import { useEffect, useRef } from "react";
 
 export const OurPartner = () => {
+  const halalLogo = [{ image: lppom }, { image: lphUin }, { image: halal }];
+
   const listPartner = [
-    { image: berkahJayaChicken },
-    { image: roomah },
-    { image: lily },
-    { image: apmiso },
-    { image: minang },
+    { image: shinyama },
     { image: steak21 },
-    { image: chingchong },
     { image: mera },
     { image: cookies },
+    { image: chingchong },
+    { image: apmiso },
+    { image: minang },
+    { image: ppkly },
+    { image: roomah },
     { image: sopteja },
-    { image: shinyama },
-    { image: lphUin },
-    { image: halal },
+    { image: lily },
+    { image: berkahJayaChicken },
   ];
 
   const scrollRef = useRef(null);
@@ -69,21 +73,52 @@ export const OurPartner = () => {
           <h2 className="text-5xl font-bold text-[#1B3932]">Our Partner</h2>
         </div>
 
-        {/* Horizontal Auto-scrolling Infinite List */}
-        <div className="overflow-x-auto hide-scrollbar" ref={scrollRef}>
-          <div
-            className="flex space-x-6 px-4 md:px-0 whitespace-nowrap"
-            style={{ width: "max-content" }}
-          >
-            {[...listPartner, ...listPartner].map((partner, index) => (
-              <img
-                key={index}
-                src={partner.image}
-                alt={`Partner ${index + 1}`}
-                className="h-24 md:h-32 object-contain"
-              />
-            ))}
+        <div className="flex justify-center items-center gap-4 mb-12">
+          <div className="flex justify-center gap-12 w-80">
+            <img
+              src={bpjph}
+              alt="halal"
+              className="w-full h-full rounded-full border-4 border-white object-contain"
+            />
           </div>
+          <div className="bg-white p-4 rounded-3xl">
+            <h4>BADAN PENYELENGGARA</h4>
+            <h5 className="font-bold">JAMINAN PRODUK HALAL</h5>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-center-1 md:grid-cols-center-2 lg:grid-cols-center-4 gap-12 mb-12">
+          {halalLogo.map((partner, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center bg-transparent rounded-lg hover:shadow-xl transform hover:scale-105 transition-all"
+            >
+              <div className="relative w-40 h-40">
+                <img
+                  src={partner.image}
+                  alt={partner.image}
+                  className="w-full h-full rounded-full border-4 border-white object-cover"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-center-1 md:grid-cols-center-2 lg:grid-cols-center-4 gap-12">
+          {listPartner.map((partner, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center bg-transparent rounded-lg hover:shadow-xl transform hover:scale-105 transition-all"
+            >
+              <div className="flex justify-center items-center w-40 h-40">
+                <img
+                  src={partner.image}
+                  alt={partner.image}
+                  className="border-white object-contain"
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
