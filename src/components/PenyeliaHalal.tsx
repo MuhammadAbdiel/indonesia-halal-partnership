@@ -12,6 +12,7 @@ import {
   lailatul,
   lukita,
   mega,
+  naila,
   novi,
   nurrahma,
   parmini,
@@ -102,6 +103,10 @@ export const PenyeliaHalal = () => {
     {
       name: "Agus Sugito, S.Th.I, M.Pd, Gr <br /> 26/12/PHR/2024/LPKEWI",
       image: sugito,
+    },
+    {
+      name: "Naila Nurul Afifah <br /> PHI 1957 01544 2024",
+      image: naila,
     },
   ];
 

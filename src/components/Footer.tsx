@@ -11,7 +11,7 @@ export const Footer = () => {
               <span className="bg-halal-lime p-2 rounded-full">
                 <img src={phone} alt="phone" className="h-6 w-6" />
               </span>
-              <div className="flex gap-8">
+              <div className="sm:flex gap-8">
                 <div className="flex gap-8">
                   <a
                     href="https://wa.me/6281234000068"
@@ -256,7 +256,7 @@ export const Footer = () => {
               <span className="bg-halal-lime p-2 rounded-full">
                 <img src={phone} alt="phone" className="h-6 w-6" />
               </span>
-              <div className="flex gap-8">
+              <div className="sm:flex gap-8">
                 <div className="flex gap-8">
                   <a
                     href="https://wa.me/6281234000068"

@@ -11,7 +11,6 @@ import {
   komisarisSatu,
   komisarisUtama,
   management,
-  naila,
 } from "../assets";
 
 export const OurExpert = () => {
@@ -67,10 +66,6 @@ export const OurExpert = () => {
     {
       name: "P3H (BPJPH) : A-1669/BD.II/P.II.II/ KP.02/05/2024",
       image: dirkerma,
-    },
-    {
-      name: "Naila Nurul Afifah : <br /> PHI 1957 01544 2024",
-      image: naila,
     },
   ];
 
