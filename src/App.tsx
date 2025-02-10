@@ -20,6 +20,7 @@ import { Helmet } from "react-helmet";
 // import { TableOfContents } from "./components/TableOfContents";
 import { PenyeliaHalal } from "./components/PenyeliaHalal";
 import { PendampingHalal } from "./components/PendampingHalal";
+import { OurPartner } from "./components/OurPartner";
 
 export const App = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -114,6 +115,7 @@ export const App = () => {
               <PendampingHalal />
               <Testimonials />
               <Gallery />
+              <OurPartner />
               <Footer />
             </>
           }

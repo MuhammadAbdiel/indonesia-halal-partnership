@@ -1,7 +1,7 @@
 export const CompanyHistory = () => {
   return (
     <section
-      className="bg-halal-green py-20 px-6 md:px-16 lg:px-32"
+      className="bg-[#0097b2] py-20 px-6 md:px-16 lg:px-32"
       id="company-history"
     >
       <div className="relative" data-aos="fade-down">

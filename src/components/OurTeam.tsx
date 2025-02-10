@@ -7,10 +7,19 @@ import {
   dirkeu,
   dirProd,
   dirut,
+  edmon,
+  iwan,
+  koes,
   komisarisDua,
   komisarisSatu,
   komisarisUtama,
+  lailatul,
   management,
+  murtika,
+  nurrahma,
+  parmini,
+  sri,
+  sugito,
   wadirut,
 } from "../assets";
 
@@ -38,11 +47,11 @@ export const OurTeam = () => {
     },
     {
       name: "Rafi Chanssa Ardiannantha, S.Pt",
-      position: "Auditor",
+      position: "Auditor Independent",
       image: auditor,
     },
     {
-      name: "Sri Ida W, S.Pd",
+      name: "Sri Ida Wahyuningsih, S.Pd",
       position: "Dirut",
       image: dirut,
     },
@@ -52,40 +61,75 @@ export const OurTeam = () => {
       image: wadirut,
     },
     {
-      name: "Gusper N, ST",
-      position: "DirProd",
-      image: dirProd,
+      name: "Koes Priantoro, AMd. Par",
+      position: "Direktur HRD",
+      image: koes,
     },
     {
-      name: "Akhmad Fattah, S.Sos",
-      position: "Direktur Marketing",
-      image: direkturMarketing,
-    },
-    {
-      name: "Nina Afrisanti, SE, MM",
-      position: "DirKeu",
-      image: dirkeu,
+      name: "Drs. H. Edmon Hisbullathif, M.Si",
+      position: "Direktur Kerjasama",
+      image: edmon,
     },
     {
       name: "Iwan Santoso, ST",
-      position: "Dir-IT",
-      image: dirIt,
-    },
-    {
-      name: "Joelijanto Yusuf, A.Md",
-      position: "DirKerma",
-      image: dirkerma,
+      position: "Direktur IT",
+      image: iwan,
     },
     {
       name: "Mida Nopitasari, S.Sos",
       position: "Management",
       image: management,
     },
+    {
+      name: "Nurrahma Safitri, SE",
+      position: "Direktur Keuangan",
+      image: nurrahma,
+    },
+    {
+      name: "Joelijanto Yusuf, A.Md",
+      position: "Koordinator Jatim 1",
+      image: dirkerma,
+    },
+    {
+      name: "Akhmad Fattah, S.Sos",
+      position: "Koordinator Jatim 2",
+      image: direkturMarketing,
+    },
+    {
+      name: "Sri Nulan Uar, SH.I",
+      position: "Koordinator Maluku",
+      image: sri,
+    },
+    {
+      name: "Parmini, SE, M.M",
+      position: "Koordinator Jateng & DIY",
+      image: parmini,
+    },
+    {
+      name: "Drs. H. Edmon Hisbullathif, M.Si",
+      position: "Koordinator Jabodetabek & Kaltim",
+      image: edmon,
+    },
+    {
+      name: "Lailatul Fitriyah, S.S",
+      position: "Koordinator Jatim 3",
+      image: lailatul,
+    },
+    {
+      name: "Tri Murtika, SE",
+      position: "Koordinator Sumsel",
+      image: murtika,
+    },
+    {
+      name: "Agus Sugito, S.Th.I, M.Pd, Gr",
+      position: "Koordinator Sultra",
+      image: sugito,
+    },
   ];
 
   return (
     <section
-      className="bg-[#1B3932] py-20 px-6 md:px-16 lg:px-32"
+      className="bg-[#d08e96] py-20 px-6 md:px-16 lg:px-32"
       id="our-team"
     >
       <div className="relative" data-aos="fade-down">
@@ -107,7 +151,7 @@ export const OurTeam = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="flex flex-col items-center bg-[#2D4D42] p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+              className="flex flex-col items-center bg-[#d4a3a8] p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
             >
               {/* Member Image */}
               <div className="relative w-32 h-32 mb-4">

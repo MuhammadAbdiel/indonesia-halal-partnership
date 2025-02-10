@@ -34,10 +34,19 @@ import conferenceHalalInternational from "./images/conference-halal-internationa
 import auditor from "./images/auditor.jpg";
 import direkturMarketing from "./images/direktur-marketing.jpg";
 import image2764 from "./images/2764.png";
+import image3938 from "./images/3938.jpg";
 import image2765 from "./images/2765.jpg";
 import image27652 from "./images/2765-2.jpg";
 import halmahera from "./images/halmahera.jpg";
 import koes from "./images/koes.jpg";
+import edmon from "./images/edmon.jpg";
+import iwan from "./images/iwan2.jpg";
+import parmini from "./images/parmini.jpg";
+import lailatul from "./images/lailatul.jpg";
+import murtika from "./images/murtika.jpg";
+import sugito from "./images/sugito.jpg";
+import binti from "./images/binti.jpg";
+import syafik from "./images/syafik.jpg";
 import sri from "./images/sri.jpg";
 import febrianto from "./images/febrianto.jpg";
 import khairiyah from "./images/khairiyah.jpg";
@@ -61,7 +70,7 @@ import titalina from "./images/titalina.jpg";
 import hartono from "./images/hartono.jpg";
 import kristina from "./images/kristina.jpg";
 import sriutami from "./images/sriutami.jpg";
-import dwidja from "./images/dwidja.png";
+import dwidja from "./images/dwidja.jpg";
 import roesmadji from "./images/roesmadji.jpg";
 import srimanfaatin from "./images/srimanfaatin.jpg";
 import malay from "./images/malay.png";
@@ -70,6 +79,19 @@ import aaService from "./images/aa-service.png";
 import signingLph from "./images/signing-lph.jpg";
 import silaturrahmi from "./images/silaturrahmi.jpg";
 import coffeeMorning from "./images/coffee-morning.jpg";
+import berkahJayaChicken from "./images/berkah-jaya-chicken.jpg";
+import roomah from "./images/roomah.jpg";
+import lily from "./images/lily.jpg";
+import apmiso from "./images/apmiso.jpg";
+import minang from "./images/minang.jpg";
+import steak21 from "./images/steak21.jpg";
+import chingchong from "./images/chingchong.jpg";
+import mera from "./images/mera.jpg";
+import cookies from "./images/cookies.jpg";
+import sopteja from "./images/sopteja.jpg";
+import shinyama from "./images/shinyama.jpg";
+import lphUin from "./images/lph-uin.jpg";
+import halal from "./images/halal.jpg";
 
 export {
   logoPartnership,
@@ -108,10 +130,19 @@ export {
   auditor,
   direkturMarketing,
   image2764,
+  image3938,
   image2765,
   image27652,
   halmahera,
   koes,
+  edmon,
+  iwan,
+  parmini,
+  lailatul,
+  murtika,
+  sugito,
+  binti,
+  syafik,
   sri,
   febrianto,
   khairiyah,
@@ -144,4 +175,17 @@ export {
   signingLph,
   silaturrahmi,
   coffeeMorning,
+  berkahJayaChicken,
+  roomah,
+  lily,
+  apmiso,
+  minang,
+  steak21,
+  chingchong,
+  mera,
+  cookies,
+  sopteja,
+  shinyama,
+  lphUin,
+  halal,
 };

@@ -1,4 +1,6 @@
 import {
+  binti,
+  dwidja,
   // dwidja,
   faiqotul,
   hartono,
@@ -7,6 +9,7 @@ import {
   roesmadji,
   srimanfaatin,
   sriutami,
+  syafik,
   titalina,
 } from "../assets";
 
@@ -38,15 +41,19 @@ export const PendampingHalal = () => {
     },
     {
       name: "Dwidja Wahyono, SE <br /> A-516/BD.II/P.II.II/KP.02/11/2024",
-      image: "",
+      image: dwidja,
     },
     {
       name: "Roesmadji <br /> A-908/BD.II/P.II.II/KP.02/10/2024",
       image: roesmadji,
     },
     {
-      name: "Siti Manfaatin, SE <br />A-318/BD.II/P.II.II/KP.02/06/2023",
-      image: srimanfaatin,
+      name: "Muhammad Syafik <br /> A-2065/BD.II/P.II.II/KP.02/12/2023",
+      image: syafik,
+    },
+    {
+      name: "Binti Khuzaimah, SH <br /> A-137/BD.II/P.II.II/KP.02/02/2024",
+      image: binti,
     },
   ];
 

@@ -10,6 +10,8 @@ import {
   image2764,
   // image2765,
   image27652,
+  image3938,
+  iwan,
   komisarisDua,
   komisarisSatu,
   komisarisUtama,
@@ -23,10 +25,10 @@ export const OurExpert = () => {
       name: "PROFESSOR HALAL DUNIA",
       image: dewanPakar,
     },
-    {
-      name: "K-204/ADM/Halal/LSP-MUI/XII/2024 <br /> Penyelia Halal : 2995/PHI.4760/B/LPK-HI/XII/2024",
-      image: dirProd,
-    },
+    // {
+    //   name: "K-204/ADM/Halal/LSP-MUI/XII/2024 <br /> Penyelia Halal : 2995/PHI.4760/B/LPK-HI/XII/2024",
+    //   image: dirProd,
+    // },
     {
       name: "PENYELIA HALAL : R.DN - 1.2.0122",
       image: direkturMarketing,
@@ -48,28 +50,20 @@ export const OurExpert = () => {
       image: komisarisSatu,
     },
     {
-      name: "2765/AHI.3919/B/LPK-HI/XI/2024",
-      image: image27652,
+      name: "P3H (BPJPH) : <br /> A-1020/BD.II/P.II.II/KP.02/03/2024 <br /> Penyelia Halal <br /> 3938/PH.083/IHB.XII/2024",
+      image: image3938,
     },
     {
       name: "P3H (BPJPH) : A-810/BD.II/P.II.II/ KP.02/08/2023",
       image: dirut,
     },
     {
-      name: "P3H (BPJPH) : A-1020/BD.II/P.II.II/ KP.02/03/2024 <br /> Penyelia Halal <br /> 2946/PHI.4711/B/LPK-HI/XII/2024",
-      image: wadirut,
+      name: "P3H (BPJPH) :  <br /> A-405/BD.II/P.II.II/KP.02/08/2023 <br /> Penyelia Halal <br /> NOMOR : 80/12/PHR/2024/LPKEWI",
+      image: iwan,
     },
     {
-      name: "2764/AHI.3918/B/LPK-HI/XI/2024",
-      image: image2764,
-    },
-    {
-      name: "SENIOR ACCOUNTING EXPERT P3H (BPJPH) : <br /> A-517/BD.II/P.II.II/ KP.02/11/2024",
+      name: "P3H (BPJPH) : <br /> A-517/BD.II/P.II.II/KP.02/11/2024",
       image: dirkeu,
-    },
-    {
-      name: "P3H (BPJPH) : A-405/BD.II/P.II.II/ KP.02/08/2023",
-      image: dirIt,
     },
     {
       name: "ADMIN <br /> P3H (BPJPH) : A-750/BD.II/P.II.II/KP.02/11/2024",

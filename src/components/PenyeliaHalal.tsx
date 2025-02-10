@@ -1,6 +1,7 @@
 import {
   aztry,
   dziki,
+  edmon,
   enden,
   febrianto,
   galung,
@@ -10,13 +11,16 @@ import {
   julkarnain,
   khairiyah,
   koes,
+  lailatul,
   lukita,
   mega,
   novi,
   nurrahma,
+  parmini,
   saprizal,
   sariba,
   sri,
+  sugito,
   umar,
 } from "../assets";
 
@@ -31,20 +35,20 @@ export const PenyeliaHalal = () => {
       image: koes,
     },
     {
-      name: "Sri Nulan Hastuti Uar, S.H.I <br /> 86/PH.007/GE/X/2024",
+      name: "Sri Nulan Uar, SH.I <br /> 86/PH.007/GE/X/2024",
       image: sri,
     },
     {
-      name: "Febrianto, S.Pd, MM <br /> 101/PH.008/GE/XI/2024",
-      image: febrianto,
+      name: "Lailatul Fitriyah, S.S <br /> 3922/PH.083/IHB.XII/2024 <br /> PHI.1957 02236 2024",
+      image: lailatul,
     },
     {
       name: "Khairiyah Rahmi, S.Pd <br /> PPHR-4/LPSDMH/6/2024/001",
       image: khairiyah,
     },
     {
-      name: "Dziki Yusuf Hidayat, S.M <br /> B-2979/Um.05/PKH/HM.00/08/2023",
-      image: dziki,
+      name: "Drs. Edmond Hisbullathif, M.Si. <br /> 62/PH.005/GE/VIII/2024",
+      image: edmon,
     },
     {
       name: "Umar Rauf Siregar, ST <br /> 89/PH.007/GE/X/2024",
@@ -95,8 +99,12 @@ export const PenyeliaHalal = () => {
       image: aztry,
     },
     {
-      name: "Saprizal <br /> 020/UPB/BPJPHEDU/11/2024",
-      image: saprizal,
+      name: "Parmini, SE, M.M, <br /> PHI.2108.00182 2023",
+      image: parmini,
+    },
+    {
+      name: "Agus Sugito, S.Th.I, M.Pd, Gr <br /> 26/12/PHR/2024/LPKEWI",
+      image: sugito,
     },
   ];
 
