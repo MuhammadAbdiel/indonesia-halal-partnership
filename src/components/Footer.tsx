@@ -8,7 +8,7 @@ export const Footer = () => {
           <h2 className="text-4xl font-bold mb-6">Center & Branch Office</h2>
           <ul className="space-y-4">
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={phone} alt="phone" className="h-6 w-6" />
               </span>
               <div className="sm:flex gap-8">
@@ -35,7 +35,7 @@ export const Footer = () => {
               </div>
             </li>
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={web} alt="web" className="h-6 w-6" />
               </span>
               <a
@@ -48,7 +48,7 @@ export const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={email} alt="email" className="h-6 w-6" />
               </span>
               <a
@@ -59,7 +59,7 @@ export const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={maps} alt="maps" className="h-6 w-6" />
               </span>
               <a
@@ -78,7 +78,7 @@ export const Footer = () => {
 
           <ul className="space-y-4">
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={maps} alt="maps" className="h-6 w-6" />
               </span>
               <a
@@ -92,7 +92,7 @@ export const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={maps} alt="maps" className="h-6 w-6" />
               </span>
               <a
@@ -107,7 +107,7 @@ export const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={maps} alt="maps" className="h-6 w-6" />
               </span>
               <a
@@ -121,7 +121,7 @@ export const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={maps} alt="maps" className="h-6 w-6" />
               </span>
               <a
@@ -135,7 +135,7 @@ export const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={maps} alt="maps" className="h-6 w-6" />
               </span>
               <a
@@ -149,7 +149,7 @@ export const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={maps} alt="maps" className="h-6 w-6" />
               </span>
               <a
@@ -163,7 +163,7 @@ export const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={maps} alt="maps" className="h-6 w-6" />
               </span>
               <a
@@ -177,7 +177,7 @@ export const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={maps} alt="maps" className="h-6 w-6" />
               </span>
               <a
@@ -191,7 +191,7 @@ export const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={maps} alt="maps" className="h-6 w-6" />
               </span>
               <a
@@ -205,7 +205,7 @@ export const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={maps} alt="maps" className="h-6 w-6" />
               </span>
               <a
@@ -219,7 +219,7 @@ export const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={maps} alt="maps" className="h-6 w-6" />
               </span>
               <a
@@ -233,7 +233,7 @@ export const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={maps} alt="maps" className="h-6 w-6" />
               </span>
               <a
@@ -253,7 +253,7 @@ export const Footer = () => {
           <h2 className="text-4xl font-bold mb-6">Contact Information</h2>
           <ul className="space-y-4">
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={phone} alt="phone" className="h-6 w-6" />
               </span>
               <div className="sm:flex gap-8">
@@ -280,7 +280,7 @@ export const Footer = () => {
               </div>
             </li>
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={web} alt="web" className="h-6 w-6" />
               </span>
               <a
@@ -293,7 +293,7 @@ export const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-4">
-              <span className="bg-halal-lime p-2 rounded-full">
+              <span className="bg-halal-lime p-2 rounded-full flex-shrink-0">
                 <img src={email} alt="email" className="h-6 w-6" />
               </span>
               <a

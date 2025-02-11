@@ -22,11 +22,11 @@ export const Hero = () => {
   };
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-halal-green">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-r from-[#090900] to-[#79590E]">
       {/* Decorative shapes */}
       <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-0 left-0 w-1/2 h-full bg-halal-greenLight opacity-40 transform -skew-x-12" />
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-halal-greenYellow opacity-40 transform skew-x-12" />
+        <div className="absolute top-0 left-96 w-1/4 h-full bg-[#12C1DC] opacity-40 transform -skew-x-12" />
+        <div className="absolute top-0 right-96 w-1/4 h-full bg-[#B8C430] opacity-40 transform skew-x-12" />
       </div>
 
       {/* Navbar */}
