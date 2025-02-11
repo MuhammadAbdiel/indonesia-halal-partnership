@@ -360,6 +360,9 @@ export const Hero = () => {
             <br />
             PARTNERSHIP
           </h1>
+          <p className="text-3xl font-bold md:text-4xl max-w-5xl mx-auto mb-12">
+            (Consultant)
+          </p>
           <p className="text-xl md:text-2xl italic max-w-3xl mx-auto mb-12">
             Halal Product are a guarantee of a better life
           </p>
