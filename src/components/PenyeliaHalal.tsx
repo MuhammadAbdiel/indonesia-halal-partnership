@@ -105,7 +105,7 @@ export const PenyeliaHalal = () => {
       image: sugito,
     },
     {
-      name: "Naila Nurul Afifah <br /> PHI 1957 01544 2024",
+      name: "Naila Nurul Afifah <br /> PHI 1957 01544 2024",
       image: naila,
     },
   ];
@@ -130,7 +130,7 @@ export const PenyeliaHalal = () => {
         </h2>
 
         {/* Team Members */}
-        <div className="grid grid-cols-center-1 md:grid-cols-center-2 lg:grid-cols-center-4 gap-12">
+        <div className="grid grid-cols-center-1 md:grid-cols-center-2 lg:grid-cols-center-2 xl:grid-cols-center-4 gap-12">
           {teamMembers.map((member, index) => (
             <div
               key={index}

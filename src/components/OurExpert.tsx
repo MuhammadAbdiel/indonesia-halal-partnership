@@ -89,7 +89,7 @@ export const OurExpert = () => {
         </h2>
 
         {/* Team Members */}
-        <div className="grid grid-cols-center-1 md:grid-cols-center-2 lg:grid-cols-center-4 gap-12">
+        <div className="grid grid-cols-center-1 md:grid-cols-center-2 lg:grid-cols-center-3 xl:grid-cols-center-4 gap-12">
           {teamMembers.map((member, index) => (
             <div
               key={index}
