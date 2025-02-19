@@ -4,7 +4,6 @@ import {
   direkturMarketing,
   dirkerma,
   dirut,
-  edmon,
   iwan,
   koes,
   komisarisDua,
@@ -69,11 +68,6 @@ export const OurTeam = () => {
       image: koes,
     },
     {
-      name: "Drs. H. Edmon Hisbullathif, M.Si",
-      position: "Direktur Kerjasama",
-      image: edmon,
-    },
-    {
       name: "Iwan Santoso, ST",
       position: "Direktur IT",
       image: iwan,
@@ -117,11 +111,6 @@ export const OurTeam = () => {
   ];
 
   const sixthGroup = [
-    {
-      name: "Drs. H. Edmon Hisbullathif, M.Si",
-      position: "Koordinator Jabodetabek & Kaltim",
-      image: edmon,
-    },
     {
       name: "Lailatul Fitriyah, S.S",
       position: "Koordinator Jatim 3",

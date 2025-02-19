@@ -35,7 +35,6 @@ import direkturMarketing from "./images/direktur-marketing.jpg";
 import image3938 from "./images/3938.jpg";
 import halmahera from "./images/halmahera.jpg";
 import koes from "./images/koes.jpg";
-import edmon from "./images/edmon.jpg";
 import iwan from "./images/iwan2.jpg";
 import parmini from "./images/parmini.jpg";
 import lailatul from "./images/lailatul.jpg";
@@ -129,7 +128,6 @@ export {
   halmahera,
   koes,
   titalina,
-  edmon,
   iwan,
   parmini,
   lailatul,

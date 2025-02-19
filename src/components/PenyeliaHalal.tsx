@@ -1,6 +1,5 @@
 import {
   aztry,
-  edmon,
   enden,
   galung,
   halmahera,
@@ -43,10 +42,6 @@ export const PenyeliaHalal = () => {
     {
       name: "Khairiyah Rahmi, S.Pd <br /> PPHR-4/LPSDMH/6/2024/001",
       image: khairiyah,
-    },
-    {
-      name: "Drs. Edmond Hisbullathif, M.Si. <br /> 62/PH.005/GE/VIII/2024",
-      image: edmon,
     },
     {
       name: "Umar Rauf Siregar, ST <br /> 89/PH.007/GE/X/2024",
