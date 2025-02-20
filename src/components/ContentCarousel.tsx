@@ -120,9 +120,9 @@ export const ContentCarousel = () => {
         ))}
       </div>
 
-      <div className="text-white font-bold text-2xl mt-10">
+      {/* <div className="text-white font-bold text-2xl mt-10">
         <h2 className="text-left mt-2">- IHP TEAM</h2>
-      </div>
+      </div> */}
 
       {/* Navigation */}
       <div className="flex justify-between items-center mt-4">
