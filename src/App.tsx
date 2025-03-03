@@ -23,6 +23,7 @@ import { PendampingHalal } from "./components/PendampingHalal";
 import { OurPartner } from "./components/OurPartner";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Home from "./pages/admin/Home";
 
 export const App = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -125,6 +126,7 @@ export const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/main-dashboard" element={<Home />} />
       </Routes>
 
       {/* Floating WhatsApp Button */}
