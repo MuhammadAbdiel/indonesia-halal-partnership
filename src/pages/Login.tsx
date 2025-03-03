@@ -1,18 +1,27 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<{ email: string; password: string }>();
+  const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
+  const { login } = useAuth();
 
-  const onSubmit = (data: any) => {
-    console.log("Login Data:", data);
+  const onSubmit = async (data: { email: string; password: string }) => {
+    try {
+      await login(data.email, data.password);
+      navigate("/main-dashboard");
+    } catch (error) {
+      console.error("Login failed", error);
+    }
   };
 
   return (

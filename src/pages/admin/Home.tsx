@@ -6,16 +6,24 @@ import {
   AiOutlineDashboard,
   AiOutlineSetting,
 } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 const Home = () => {
+  const { logout } = useAuth();
+  const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
-  const handleLogout = () => {
-    console.log("User logged out");
+  const handleLogout = async () => {
+    try {
+      await logout();
+      navigate("/login");
+    } catch (error) {
+      console.error("Failed to logout", error);
+    }
   };
 
   return (

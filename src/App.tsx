@@ -24,6 +24,8 @@ import { OurPartner } from "./components/OurPartner";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Home from "./pages/admin/Home";
+import { ProtectedRoute } from "./components/ProtectedRoute";
+import { GuestRoute } from "./components/GuestRoute";
 
 export const App = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -123,10 +125,16 @@ export const App = () => {
             </>
           }
         />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/main-dashboard" element={<Home />} />
+
+        <Route element={<GuestRoute />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Route>
+
+        <Route element={<ProtectedRoute />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/main-dashboard" element={<Home />} />
+        </Route>
       </Routes>
 
       {/* Floating WhatsApp Button */}
