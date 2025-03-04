@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { logoPartnership } from "../assets";
 
 const Login = () => {
   const {
@@ -25,7 +26,17 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 flex items-center justify-center py-10 px-5">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 flex flex-col gap-12 items-center justify-start py-10 px-5">
+      <div className="flex justify-center">
+        <div className="bg-white rounded-full p-4 shadow-lg animate-fade-up">
+          <img
+            src={logoPartnership}
+            alt="Partnership Logo"
+            className="w-32 h-32"
+          />
+        </div>
+      </div>
+
       <div className="max-w-md w-full bg-white shadow-xl rounded-lg p-8">
         <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">
           Login
