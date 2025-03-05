@@ -15,13 +15,17 @@ const Login = () => {
 
   const [showPassword, setShowPassword] = useState(false);
   const { login } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = async (data: { email: string; password: string }) => {
     try {
+      setIsLoading(true);
       await login(data.email, data.password);
       navigate("/main-dashboard");
     } catch (error) {
       console.error("Login failed", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -91,6 +95,7 @@ const Login = () => {
 
           <button
             type="submit"
+            disabled={isLoading}
             className="w-full bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-700 transition"
           >
             Login

@@ -6,6 +6,7 @@ import {
   ReactNode,
 } from "react";
 import api from "../service/api";
+import Swal from 'sweetalert2'
 
 interface User {
   id: number;
@@ -63,8 +64,13 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       const { token } = response.data;
       localStorage.setItem("token", token);
       setToken(token);
-    } catch (error) {
-      console.error("Login failed", error);
+    } catch (error: any) {
+      console.error("Login failed", error.response.data.error);
+      Swal.fire({
+        icon: "error",
+        title: "Login Gagal",
+        text: error.response.data.error,
+      });
       throw error;
     }
   };
@@ -77,9 +83,19 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   ) => {
     try {
       await api.post("/auth/register", { fullName, email, password });
+      Swal.fire({
+        icon: "success",
+        title: "Registrasi Berhasil",
+        text: 'Silahkan cek email untuk verifikasi',
+      });
       // await login(email, password);
-    } catch (error) {
+    } catch (error: any) {
       console.error("Registration failed", error);
+      Swal.fire({
+        icon: "error",
+        title: "Registrasi Gagal",
+        text: error.response.data.error,
+      });
       throw error;
     }
   };

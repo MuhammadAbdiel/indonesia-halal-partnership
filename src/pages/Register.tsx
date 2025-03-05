@@ -15,6 +15,7 @@ const Register = () => {
 
   const [showPassword, setShowPassword] = useState(false);
   const { register: authRegister } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = async (data: {
     fullName: string;
@@ -22,10 +23,13 @@ const Register = () => {
     password: string;
   }) => {
     try {
+      setIsLoading(true);
       await authRegister(data.fullName, data.email, data.password);
       navigate("/main-dashboard");
     } catch (error) {
       console.error("Login failed", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -114,6 +118,7 @@ const Register = () => {
 
           <button
             type="submit"
+            disabled={isLoading}
             className="w-full bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-700 transition"
           >
             Register

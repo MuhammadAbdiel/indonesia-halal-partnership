@@ -26,6 +26,8 @@ import Register from "./pages/Register";
 import Home from "./pages/admin/Home";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { GuestRoute } from "./components/GuestRoute";
+import Kafas from "./pages/admin/Kafas";
+import KafasDetail from "./pages/admin/KafasDetail";
 
 export const App = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -134,6 +136,8 @@ export const App = () => {
         <Route element={<ProtectedRoute />}>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/main-dashboard" element={<Home />} />
+          <Route path="/main-dashboard/kafas" element={<Kafas />} />
+          <Route path="/main-dashboard/kafas/:id" element={<KafasDetail />} />
         </Route>
       </Routes>
 
