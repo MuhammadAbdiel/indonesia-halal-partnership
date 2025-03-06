@@ -1,18 +1,34 @@
-// src/pages/admin/KafasDetail.tsx
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "../../store";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "../../store";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { assignKafasToUser, getKafasById } from "../../store/kafas/kafasAction";
 import DataTable from "react-data-table-component";
-import { useAuth } from "../../context/AuthContext";
 import DashboardLayout from "../../layouts/DashboardLayout";
+import { getAllUser } from "../../store/users/userAction";
+
 export default function KafasDetail() {
   const { id } = useParams<{ id: string }>(); // Ambil ID Kafas dari URL
   const dispatch: AppDispatch = useDispatch();
-  const { user } = useAuth();
   const [assignError, setAssignError] = useState<string | null>(null); // State untuk error assign
   const [kafasDetail, setKafasDetail] = useState<any>(null);
+  const [users, setUsers] = useState<any[]>([]);
+  const [selectedUserId, setSelectedUserId] = useState<string | null>(null); // State untuk menyimpan ID pengguna yang dipilih
+  const { isRefresh } = useSelector((state: RootState) => state.kafas);
+
+  const handleGetAllUser = async () => {
+    const params: any = {};
+
+    await dispatch(getAllUser(params)).then((res) => {
+      if (res.payload) {
+        setUsers(res.payload);
+      }
+    });
+  };
+
+  useEffect(() => {
+    handleGetAllUser();
+  }, [dispatch]);
 
   const handleGetKafasById = async () => {
     await dispatch(getKafasById(id as string)).then((res) => {
@@ -20,20 +36,29 @@ export default function KafasDetail() {
         setKafasDetail(res.payload);
       }
     });
-  }
+  };
 
   useEffect(() => {
     if (id) {
       handleGetKafasById();
     }
-  }, [id, dispatch]);
+  }, [id, dispatch, isRefresh]);
 
   // Handle assign user to Kafas
   const handleAssignUser = async () => {
-    await dispatch(assignKafasToUser({
-      userId: user?.id,
-      kafasId: id
-    })).then((res) => {
+    if (!selectedUserId) {
+      setAssignError("Silakan pilih pengguna terlebih dahulu.");
+      return;
+    }
+
+    const body = Object.assign({}, {
+      userId: parseInt(selectedUserId),
+      kafasId: parseInt(id as string),
+    })
+
+    await dispatch(
+      assignKafasToUser({ data: body })
+    ).then((res) => {
       if (res.payload) {
         setAssignError(res.payload.message);
       }
@@ -44,12 +69,12 @@ export default function KafasDetail() {
   const kafasUsageColumns = [
     {
       name: "User ID",
-      selector: (row: any) => row.userId,
+      selector: (row: any) => row.id,
       sortable: true,
     },
     {
       name: "Nama User",
-      selector: (row: any) => row.user.name, // Asumsikan user memiliki field `name`
+      selector: (row: any) => row.fullName,
       sortable: true,
     },
     {
@@ -61,44 +86,65 @@ export default function KafasDetail() {
 
   return (
     <DashboardLayout>
-      <div className="p-6">
-        <h1 className="text-2xl font-bold text-gray-800 mb-4">Detail Kafas</h1>
+      <div className="p-6 bg-gray-50 min-h-screen">
+        <h1 className="text-3xl font-bold text-gray-800 mb-6">Detail Kafas</h1>
 
-        <div className="bg-white p-4 rounded-lg">
-          {/* Detail Kafas */}
-          <div className="mb-6">
-            <h2 className="text-xl font-semibold text-gray-700">Informasi Kafas</h2>
-            <p><strong>ID:</strong> {kafasDetail?.id}</p>
-            <p><strong>Code:</strong> {kafasDetail?.code}</p>
-            <p><strong>Quota:</strong> {kafasDetail?.quota}</p>
-            <p><strong>Quota Tersedia:</strong> {kafasDetail?.quota - (kafasDetail?.KafasUsage?.length || 0)}</p>
-          </div>
-
-          {/* Daftar KafasUsage */}
-          <div className="mb-6">
-            <h2 className="text-xl font-semibold text-gray-700">Daftar Pengguna</h2>
-            <DataTable
-              columns={kafasUsageColumns}
-              data={kafasDetail?.KafasUsage || []}
-              pagination
-              highlightOnHover
-            />
-          </div>
-
-          {/* Form Assign User */}
-          <div className="mb-6">
-            <h2 className="text-xl font-semibold text-gray-700">Assign User ke Kafas</h2>
-            <div className="flex items-center gap-4">
-              <input type="number" placeholder="User ID" className="p-2 border rounded" />
-              <button
-                onClick={handleAssignUser}
-                className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-              >
-                Assign User
-              </button>
+        {/* Card untuk Detail Kafas */}
+        <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 className="text-xl font-semibold text-gray-700 mb-4">Informasi Kafas</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <p className="text-gray-600"><strong>ID:</strong> {kafasDetail?.id}</p>
+              <p className="text-gray-600"><strong>Code:</strong> {kafasDetail?.code}</p>
             </div>
-            {assignError && <p className="text-red-500 mt-2">{assignError}</p>}
+            <div>
+              <p className="text-gray-600"><strong>Quota:</strong> {kafasDetail?.quota}</p>
+              {/* <p className="text-gray-600">
+                <strong>Quota Tersedia:</strong>{" "}
+                {kafasDetail?.quota - (kafasDetail?.KafasUsage?.length || 0)}
+              </p> */}
+            </div>
           </div>
+        </div>
+
+        {/* Card untuk Daftar Pengguna */}
+        <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h2 className="text-xl font-semibold text-gray-700 mb-4">Daftar Pengguna</h2>
+          <DataTable
+            columns={kafasUsageColumns}
+            data={kafasDetail?.users || []}
+            pagination
+            highlightOnHover
+            className="border rounded"
+          />
+        </div>
+
+        {/* Card untuk Assign User */}
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <h2 className="text-xl font-semibold text-gray-700 mb-4">Assign Kafas</h2>
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <select
+              value={selectedUserId || ""}
+              onChange={(e) => setSelectedUserId(e.target.value)}
+              className="w-full md:w-64 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="">Pilih Pengguna</option>
+              {users.map((user) => (
+                <option key={user.id} value={user.id}>
+                  {user.fullName}
+                </option>
+              ))}
+            </select>
+            <button
+              onClick={handleAssignUser}
+              className="w-full md:w-auto p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              Assign User
+            </button>
+          </div>
+          {assignError && (
+            <p className="text-red-500 mt-2 text-sm">{assignError}</p>
+          )}
         </div>
       </div>
     </DashboardLayout>
