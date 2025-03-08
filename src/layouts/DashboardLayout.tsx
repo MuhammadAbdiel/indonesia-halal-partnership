@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
-  const { logout } = useAuth();
+  const { user, logout } = useAuth();
   const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -40,15 +40,17 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               Dashboard
             </span>
           </Link>
-          <Link
-            to="/main-dashboard/kafas"
-            className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg mt-2"
-          >
-            <AiOutlineShop size={24} className="mr-2" />
-            <span className={`${isSidebarOpen ? "block" : "hidden"}`}>
-              Kafas
-            </span>
-          </Link>
+          {user?.role === 'ADMIN' && (
+            <Link
+              to="/main-dashboard/kafas"
+              className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg mt-2"
+            >
+              <AiOutlineShop size={24} className="mr-2" />
+              <span className={`${isSidebarOpen ? "block" : "hidden"}`}>
+                Kode Fasilitator
+              </span>
+            </Link>
+          )}
           <Link
             to="#"
             className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg mt-2"
@@ -72,6 +74,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             className="flex items-center text-gray-700"
           >
             <AiOutlineUser size={24} />
+            <span className="ml-2">{user?.fullName}</span>
           </button>
           {isDropdownOpen && (
             <div className="absolute right-0 mt-2 w-48 bg-white shadow-md rounded-lg py-2">

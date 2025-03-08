@@ -2,10 +2,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../store";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { assignKafasToUser, getKafasById } from "../../store/kafas/kafasAction";
+import { assignKafasToUser, deleteAssignKafasToUser, getKafasById } from "../../store/kafas/kafasAction";
 import DataTable from "react-data-table-component";
 import DashboardLayout from "../../layouts/DashboardLayout";
 import { getAllUser } from "../../store/users/userAction";
+import Swal from "sweetalert2";
+import { setIsDetailRefresh } from "../../store/kafas/kafasSlice";
 
 export default function KafasDetail() {
   const { id } = useParams<{ id: string }>(); // Ambil ID Kafas dari URL
@@ -14,7 +16,7 @@ export default function KafasDetail() {
   const [kafasDetail, setKafasDetail] = useState<any>(null);
   const [users, setUsers] = useState<any[]>([]);
   const [selectedUserId, setSelectedUserId] = useState<string | null>(null); // State untuk menyimpan ID pengguna yang dipilih
-  const { isRefresh } = useSelector((state: RootState) => state.kafas);
+  const { isRefresh, isDetailRefresh } = useSelector((state: RootState) => state.kafas);
 
   const handleGetAllUser = async () => {
     const params: any = {};
@@ -42,7 +44,7 @@ export default function KafasDetail() {
     if (id) {
       handleGetKafasById();
     }
-  }, [id, dispatch, isRefresh]);
+  }, [id, dispatch, isRefresh, isDetailRefresh]);
 
   // Handle assign user to Kafas
   const handleAssignUser = async () => {
@@ -59,9 +61,42 @@ export default function KafasDetail() {
     await dispatch(
       assignKafasToUser({ data: body })
     ).then((res) => {
-      if (res.payload) {
-        setAssignError(res.payload.message);
+      if (res?.meta?.requestStatus !== "fulfilled") {
+        setAssignError(res.payload.response.data.error);
+
+        return
       }
+
+      setAssignError(null);
+      Swal.fire({
+        title: "Berhasil",
+        text: "Pengguna berhasil diassign ke Kafas",
+        icon: "success",
+      });
+      // @ts-ignore
+      dispatch(setIsDetailRefresh())
+    });
+  };
+
+  const handleDeleteAssignUser = async (id: string) => {
+    await dispatch(deleteAssignKafasToUser({ id })).then((res: any) => {
+      if (res?.meta?.requestStatus !== "fulfilled") {
+        Swal.fire({
+          title: "Gagal",
+          text: res.payload.response.data.error,
+          icon: "error",
+        });
+
+        return
+      }
+
+      Swal.fire({
+        title: "Berhasil",
+        text: "Pengguna berhasil dihapus dari Kafas",
+        icon: "success",
+      });
+      // @ts-ignore
+      dispatch(setIsDetailRefresh())
     });
   };
 
@@ -82,23 +117,30 @@ export default function KafasDetail() {
       selector: (row: any) => new Date(row.createdAt).toLocaleString(),
       sortable: true,
     },
+    {
+      name: "Aksi",
+      cell: (row: any) => {
+        return <button onClick={() => handleDeleteAssignUser(row.id)} className="bg-red-500 text-white px-2 py-1 rounded-md">
+          Hapus
+        </button>
+      },
+    },
   ];
 
   return (
     <DashboardLayout>
       <div className="p-6 bg-gray-50 min-h-screen">
-        <h1 className="text-3xl font-bold text-gray-800 mb-6">Detail Kafas</h1>
+        <h1 className="text-3xl font-bold text-gray-800 mb-6 uppercase">Detail Kafas</h1>
 
         {/* Card untuk Detail Kafas */}
         <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-700 mb-4">Informasi Kafas</h2>
+          <h2 className="text-xl font-semibold text-gray-700 mb-4 uppercase">Informasi Kafas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <p className="text-gray-600"><strong>ID:</strong> {kafasDetail?.id}</p>
-              <p className="text-gray-600"><strong>Code:</strong> {kafasDetail?.code}</p>
+              <p className="text-gray-600"><strong>Kode Fasilitator:</strong> {kafasDetail?.code}</p>
             </div>
             <div>
-              <p className="text-gray-600"><strong>Quota:</strong> {kafasDetail?.quota}</p>
+              <p className="text-gray-600"><strong>Kuota:</strong> {kafasDetail?.quota}</p>
               {/* <p className="text-gray-600">
                 <strong>Quota Tersedia:</strong>{" "}
                 {kafasDetail?.quota - (kafasDetail?.KafasUsage?.length || 0)}
@@ -109,7 +151,7 @@ export default function KafasDetail() {
 
         {/* Card untuk Daftar Pengguna */}
         <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-700 mb-4">Daftar Pengguna</h2>
+          <h2 className="text-xl font-semibold text-gray-700 mb-4 uppercase">Daftar Pengguna</h2>
           <DataTable
             columns={kafasUsageColumns}
             data={kafasDetail?.users || []}
@@ -121,7 +163,7 @@ export default function KafasDetail() {
 
         {/* Card untuk Assign User */}
         <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-700 mb-4">Assign Kafas</h2>
+          <h2 className="text-xl font-semibold text-gray-700 mb-4 uppercase">Assign Kafas</h2>
           <div className="flex flex-col md:flex-row items-center gap-4">
             <select
               value={selectedUserId || ""}

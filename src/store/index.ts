@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import auth from "./auth/authSlice";
 import kafas from "./kafas/kafasSlice";
+import users from "./users/usersSlice";
 
 export const store = configureStore({
   reducer: {
     auth,
     kafas,
+    users,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

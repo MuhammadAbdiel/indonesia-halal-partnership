@@ -28,6 +28,8 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import { GuestRoute } from "./components/GuestRoute";
 import Kafas from "./pages/admin/Kafas";
 import KafasDetail from "./pages/admin/KafasDetail";
+import KafasCreate from "./pages/admin/KafasCreate";
+import KafasEdit from "./pages/admin/KafasEdit";
 
 export const App = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -124,6 +126,44 @@ export const App = () => {
               <Gallery />
               <OurPartner />
               <Footer />
+
+              {/* Floating WhatsApp Button */}
+              {window.location.pathname !== "/dashboard" && (
+                <div className="fixed bottom-5 right-5 z-10">
+                  <img
+                    src={floatingWhatsapp}
+                    width={75}
+                    height={75}
+                    alt="whatsapp"
+                    onClick={() => setOpenMenu(!openMenu)}
+                    className="cursor-pointer"
+                  />
+                </div>
+              )}
+
+              {/* WhatsApp Menu */}
+              {openMenu && (
+                <div className="fixed bottom-20 right-5 bg-white p-4 shadow-lg rounded-lg z-20">
+                  <button
+                    className="block w-full bg-emerald-500 text-white px-4 py-2 rounded mb-2"
+                    onClick={() => sendMessage(2)}
+                  >
+                    Admin 1
+                  </button>
+                  <button
+                    className="block w-full bg-emerald-500 text-white px-4 py-2 rounded mb-2"
+                    onClick={() => sendMessage(1)}
+                  >
+                    Admin 2
+                  </button>
+                  {/* <button
+                    className="block w-full bg-blue-500 text-white px-4 py-2 rounded"
+                    onClick={() => sendMessage(3)}
+                  >
+                    Bicara dengan Admin
+                  </button> */}
+                </div>
+              )}
             </>
           }
         />
@@ -138,46 +178,10 @@ export const App = () => {
           <Route path="/main-dashboard" element={<Home />} />
           <Route path="/main-dashboard/kafas" element={<Kafas />} />
           <Route path="/main-dashboard/kafas/:id" element={<KafasDetail />} />
+          <Route path="/main-dashboard/kafas/create" element={<KafasCreate />} />
+          <Route path="/main-dashboard/kafas/:id/edit" element={<KafasEdit />} />
         </Route>
       </Routes>
-
-      {/* Floating WhatsApp Button */}
-      {window.location.pathname !== "/dashboard" && (
-        <div className="fixed bottom-5 right-5 z-10">
-          <img
-            src={floatingWhatsapp}
-            width={75}
-            height={75}
-            alt="whatsapp"
-            onClick={() => setOpenMenu(!openMenu)}
-            className="cursor-pointer"
-          />
-        </div>
-      )}
-
-      {/* WhatsApp Menu */}
-      {openMenu && (
-        <div className="fixed bottom-20 right-5 bg-white p-4 shadow-lg rounded-lg z-20">
-          <button
-            className="block w-full bg-emerald-500 text-white px-4 py-2 rounded mb-2"
-            onClick={() => sendMessage(2)}
-          >
-            Admin 1
-          </button>
-          <button
-            className="block w-full bg-emerald-500 text-white px-4 py-2 rounded mb-2"
-            onClick={() => sendMessage(1)}
-          >
-            Admin 2
-          </button>
-          {/* <button
-            className="block w-full bg-blue-500 text-white px-4 py-2 rounded"
-            onClick={() => sendMessage(3)}
-          >
-            Bicara dengan Admin
-          </button> */}
-        </div>
-      )}
     </BrowserRouter>
   );
 };

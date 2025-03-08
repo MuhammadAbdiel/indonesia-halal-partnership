@@ -31,10 +31,40 @@ export const createKafas = createAsyncThunk('kafas/create', async ({ data }: any
   }
 })
 
+export const updateKafas = createAsyncThunk('kafas/update', async ({ id, data }: { id: string, data: any }, { rejectWithValue }) => {
+  try {
+    const response = await api.put(`/kafas/${id}`, data)
+
+    return response.data
+  } catch (error) {
+    return rejectWithValue(error)
+  }
+})
+
+export const deleteKafas = createAsyncThunk('kafas/delete', async ({ id }: { id: string }, { rejectWithValue }) => {
+  try {
+    const response = await api.delete(`/kafas/${id}`)
+
+    return response.data
+  } catch (error) {
+    return rejectWithValue(error)
+  }
+})
+
 export const assignKafasToUser = createAsyncThunk('kafas/assignToUser', async ({ data }: any, { rejectWithValue }) => {
   try {
     const response = await api.post(`/kafas/assign`, data)
     
+    return response.data
+  } catch (error) {
+    return rejectWithValue(error)
+  }
+})
+
+export const deleteAssignKafasToUser = createAsyncThunk('kafas/deleteAssignToUser', async ({ id }: { id: string }, { rejectWithValue }) => {
+  try {
+    const response = await api.delete(`/kafas/assign/${id}`)
+
     return response.data
   } catch (error) {
     return rejectWithValue(error)

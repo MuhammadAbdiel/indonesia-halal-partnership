@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useAuth } from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { logoPartnership } from "../assets";
 
 const Register = () => {
@@ -34,7 +34,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 flex flex-col items-center justify-start gap-12 py-10 px-5">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 flex flex-col items-center justify-start gap-4 py-10 px-5">
       <div className="flex justify-center">
         <div className="bg-white rounded-full p-4 shadow-lg animate-fade-up">
           <img
@@ -123,6 +123,12 @@ const Register = () => {
           >
             Register
           </button>
+
+          <div className="flex justify-center mt-4">
+            <p className="text-gray-600">
+              Sudah punya akun? <Link to="/login" className="text-blue-500">Login</Link>
+            </p>
+          </div>
         </form>
       </div>
     </div>
