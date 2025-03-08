@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { AiOutlineEye, AiOutlineEyeInvisible, AiOutlineLoading } from "react-icons/ai";
 import { useAuth } from "../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import { logoPartnership } from "../assets";
@@ -119,9 +119,13 @@ const Register = () => {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-700 transition"
+            className="w-full bg-gray-800 text-white flex justify-center items-center font-semibold py-2 px-4 rounded-lg hover:bg-gray-700 transition"
           >
-            Register
+            {isLoading ? (
+              <AiOutlineLoading size={20} className="animate-spin" />
+            ) : (
+              "Register"
+            )}
           </button>
 
           <div className="flex justify-center mt-4">

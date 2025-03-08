@@ -134,7 +134,7 @@ export default function KafasDetail() {
 
         {/* Card untuk Detail Kafas */}
         <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-700 mb-4 uppercase">Informasi Kafas</h2>
+          <h2 className="text-xl font-semibold text-gray-700 mb-4 uppercase">Informasi Kode Fasilitator</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <p className="text-gray-600"><strong>Kode Fasilitator:</strong> {kafasDetail?.code}</p>
@@ -163,7 +163,7 @@ export default function KafasDetail() {
 
         {/* Card untuk Assign User */}
         <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-700 mb-4 uppercase">Assign Kafas</h2>
+          <h2 className="text-xl font-semibold text-gray-700 mb-4 uppercase">Assign Kode Fasilitator</h2>
           <div className="flex flex-col md:flex-row items-center gap-4">
             <select
               value={selectedUserId || ""}

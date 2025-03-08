@@ -30,7 +30,7 @@ export default function KafasCreate() {
 
       Swal.fire({
         title: "Berhasil",
-        text: res.payload.message,
+        text: "Kafas berhasil ditambahkan",
         icon: "success",
       });
 
