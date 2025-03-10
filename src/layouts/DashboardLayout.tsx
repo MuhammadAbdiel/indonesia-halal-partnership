@@ -40,17 +40,15 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               Dashboard
             </span>
           </Link>
-          {user?.role === 'ADMIN' && (
-            <Link
-              to="/main-dashboard/kafas"
-              className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg mt-2"
-            >
-              <AiOutlineShop size={24} className="mr-2" />
-              <span className={`${isSidebarOpen ? "block" : "hidden"}`}>
-                Kode Fasilitator
-              </span>
-            </Link>
-          )}
+          <Link
+            to="/main-dashboard/kafas"
+            className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg mt-2"
+          >
+            <AiOutlineShop size={24} className="mr-2" />
+            <span className={`${isSidebarOpen ? "block" : "hidden"}`}>
+              Kode Fasilitator
+            </span>
+          </Link>
           <Link
             to="#"
             className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg mt-2"

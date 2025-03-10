@@ -167,6 +167,7 @@ export const App = () => {
             </>
           }
         />
+        <Route path="/dashboard" element={<Dashboard />} />
 
         <Route element={<GuestRoute />}>
           <Route path="/login" element={<Login />} />
@@ -174,7 +175,6 @@ export const App = () => {
         </Route>
 
         <Route element={<ProtectedRoute />}>
-          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/main-dashboard" element={<Home />} />
           <Route path="/main-dashboard/kafas" element={<Kafas />} />
           <Route path="/main-dashboard/kafas/:id" element={<KafasDetail />} />

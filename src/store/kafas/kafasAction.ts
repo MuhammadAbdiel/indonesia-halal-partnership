@@ -21,6 +21,16 @@ export const getKafasById = createAsyncThunk('kafas/getById', async (id: string,
   }
 })
 
+export const getKafasByUserId = createAsyncThunk('kafas/getByUserId', async (id: string, { rejectWithValue }) => {
+  try {
+    const response = await api.get(`/kafas/user/${id}`)
+
+    return response.data
+  } catch (error) {
+    return rejectWithValue(error)
+  }
+})
+
 export const createKafas = createAsyncThunk('kafas/create', async ({ data }: any, { rejectWithValue }) => {
   try {
     const response = await api.post('/kafas', data)
