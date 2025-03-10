@@ -97,7 +97,7 @@ export default function Kafas() {
       selector: (row: any) => row?.KafasUsage?.length > 0 ? new Date(row?.KafasUsage[0]?.updatedAt).toLocaleString() : "-",
       sortable: true,
     },
-    {
+    ...(user?.role === "ADMIN" ? [{
       name: "Action",
       selector: (_row: any) => (
         <div className="flex gap-2">
@@ -112,7 +112,7 @@ export default function Kafas() {
           </button>
         </div>
       ),
-    },
+    }] : []),
   ];
 
   return (
@@ -123,10 +123,12 @@ export default function Kafas() {
         {/* white container */}
         <div className="bg-white p-4 rounded-lg">
           {/* <h1 className="text-2xl font-bold text-gray-800 mb-4">Kafas List</h1> */}
-          {/* button add kafas */}
-          <button onClick={() => navigate('/main-dashboard/kafas/create')} className="bg-blue-500 text-white px-4 py-2 rounded-md">
-            Add Kode Fasilitator
-          </button>
+
+          {user?.role === "ADMIN" && (
+            <button onClick={() => navigate('/main-dashboard/kafas/create')} className="bg-blue-500 text-white px-4 py-2 rounded-md">
+              Add Kode Fasilitator
+            </button>
+          )}
 
           <DataTable
             columns={columns as any}
